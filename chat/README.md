@@ -1,11 +1,13 @@
 # chat
 
-Customer-support chat over WebSocket.
+Support chat over WebSocket.
 
-Part of [repay](../README.md).
+Stack: Java 21, Spring Boot 3.1.5, PostgreSQL, Kafka, OpenFeign, WebSocket, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

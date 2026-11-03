@@ -1,11 +1,7 @@
 # trusted-user
 
-Trusted-user / OTP service.
+Trusted users and OTP.
 
-Part of [repay](../README.md).
+Stack: Java 17, Spring Boot 3.4.3, Keycloak, Maven.
 
-```bash
-./mvnw spring-boot:run
-```
-
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

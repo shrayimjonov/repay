@@ -1,12 +1,13 @@
 # log-aggregation
 
-Centralized request/audit logging: `common-logging` library plus `logging-rest` API on ClickHouse.
+Shared logging library (common-logging) and a REST API (logging-rest) that keeps request logs in ClickHouse.
 
-Part of [repay](../README.md).
+Stack: Java 21, Spring Boot 3.1.7, Maven.
+
+Run:
 
 ```bash
-./mvnw install                                  # builds common-logging and logging-rest
-./mvnw -pl logging-rest spring-boot:run          # starts the REST API
+./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

@@ -1,5 +1,5 @@
 # telegrambot
 
-Telegram bot (Python).
+Telegram bot for Repay, written in Python.
 
-Part of [repay](../README.md).
+Stack: Python.

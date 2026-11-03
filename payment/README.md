@@ -1,11 +1,13 @@
 # payment
 
-Payment processing, payment sessions, reconciliation and Excel exports.
+Payment processing, payment sessions, reconciliation and Excel export.
 
-Part of [repay](../README.md).
+Stack: Java 21, Spring Boot 3.1.8, PostgreSQL, MongoDB, Kafka, Redis, Liquibase, OpenFeign, Apache POI, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

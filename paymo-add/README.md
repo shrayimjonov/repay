@@ -1,11 +1,13 @@
 # paymo-add
 
-Legacy Paymo integration (Java 8, Oracle).
+Older Paymo integration (Java 8, Oracle).
 
-Part of [repay](../README.md).
+Stack: Java 8, Spring Boot 2.7.4, Oracle, OpenFeign, Keycloak, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

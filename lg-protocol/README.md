@@ -1,11 +1,13 @@
 # lg-protocol
 
-Logging-protocol consumer (Kotlin, Kafka).
+Kafka consumer that saves logging protocol messages, written in Kotlin.
 
-Part of [repay](../README.md).
+Stack: Kotlin, Java 21, Spring Boot 3.3.5, PostgreSQL, Kafka, Liquibase, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

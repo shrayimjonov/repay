@@ -1,11 +1,13 @@
 # common
 
-Shared DTOs, events and utilities.
+Shared DTOs, events and helper classes used by other Repay services.
 
-Part of [repay](../README.md).
+Stack: Java 21, Spring Boot 3.1.8, Kafka, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

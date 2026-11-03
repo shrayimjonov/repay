@@ -1,11 +1,13 @@
 # court
 
-Court and collection case workflows (Kotlin).
+Court and collection cases, written in Kotlin.
 
-Part of [repay](../README.md).
+Stack: Kotlin, Java 21, Spring Boot 3.4.1, PostgreSQL, Kafka, Redis, Liquibase, OpenFeign, Quartz, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

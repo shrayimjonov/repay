@@ -1,11 +1,13 @@
 # notification
 
-SMS and push notifications.
+Sends SMS and push notifications.
 
-Part of [repay](../README.md).
+Stack: Java 23, Spring Boot 3.3.4, PostgreSQL, MongoDB, Kafka, Redis, Liquibase, OpenFeign, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

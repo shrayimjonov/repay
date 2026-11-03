@@ -2,10 +2,12 @@
 
 File storage service on MinIO.
 
-Part of [repay](../README.md).
+Stack: Java 21, Spring Boot 3.3.0, PostgreSQL, Kafka, MinIO, Liquibase, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

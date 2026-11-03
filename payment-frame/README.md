@@ -1,11 +1,13 @@
 # payment-frame
 
-Embeddable payment frame backend (Kotlin).
+Backend for the embedded payment page, written in Kotlin.
 
-Part of [repay](../README.md).
+Stack: Kotlin, Java 21, Spring Boot 3.4.4, PostgreSQL, Kafka, Redis, Gradle.
+
+Run:
 
 ```bash
 ./gradlew bootRun
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

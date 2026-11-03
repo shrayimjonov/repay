@@ -1,11 +1,13 @@
 # client
 
-Customer data service (Kotlin).
+Customer data service, written in Kotlin.
 
-Part of [repay](../README.md).
+Stack: Kotlin, Java 21, Spring Boot 3.4.3, PostgreSQL, Kafka, Redis, OpenFeign, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

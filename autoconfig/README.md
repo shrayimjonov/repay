@@ -1,11 +1,13 @@
 # autoconfig
 
-Shared Spring Boot auto-configuration starter (Kafka, Redis, MongoDB).
+Shared Spring Boot starter with common config for Kafka, Redis and MongoDB.
 
-Part of [repay](../README.md).
+Stack: Java 23, Spring Boot 3.4.0, MongoDB, Kafka, Redis, Maven.
+
+Run:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.

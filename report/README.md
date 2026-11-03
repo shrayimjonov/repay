@@ -1,11 +1,13 @@
 # report
 
-Repayment reports (PDF/Excel) built on ClickHouse.
+Repayment reports in PDF and Excel, data from ClickHouse.
 
-Part of [repay](../README.md).
+Stack: Java 21, ClickHouse, Kafka, OpenFeign, Apache POI, iText, Gradle.
+
+Run:
 
 ```bash
 ./gradlew bootRun
 ```
 
-Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).
+Settings come from environment variables.
