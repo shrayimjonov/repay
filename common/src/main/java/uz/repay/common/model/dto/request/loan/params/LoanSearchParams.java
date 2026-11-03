@@ -19,7 +19,7 @@ public class LoanSearchParams {
     private String personCode;
     @Schema(name = "extId", example = "0098127386", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "loan external id in core banking")
     private String extId;
-    @Schema(name = "name", example = "AZIMOV ZAFARJON QOBILJON O'G'LI", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "client full name")
+    @Schema(name = "name", example = "ESHMATOV TOSHMAT TESHABOY O'G'LI", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "client full name")
     private String name;
     @Schema(name = "phone", example = "998901234567", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "client phone number")
     private String phone;

@@ -11,7 +11,7 @@ public class NotificationDebitPayEventTest {
     private final static String PAN = "561468******7308";
     private final static String LOAN_EXT_ID = "01121158076";
     private final static String PHONE = "998901234567";
-    private final static String FULL_NAME = "SIROJIDDINOV NODIRBEK";
+    private final static String FULL_NAME = "ESHMATOV TOSHMAT";
     private final static Long AMOUNT = 5_111L;
     private final static Language LANGUAGE = Language.defaultLang();
     private final static Payer PAYER = Payer.AUTO;

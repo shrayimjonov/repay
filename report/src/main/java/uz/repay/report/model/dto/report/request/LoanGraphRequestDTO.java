@@ -22,7 +22,7 @@ public class LoanGraphRequestDTO {
     private String loanExtId;
     @NotBlank
     @JsonProperty("client_name")
-    @Schema(name = "client_name", description = "client full name", requiredMode = Schema.RequiredMode.REQUIRED, example = "SIROJIDDINOV NODIRBEK")
+    @Schema(name = "client_name", description = "client full name", requiredMode = Schema.RequiredMode.REQUIRED, example = "ESHMATOV TOSHMAT")
     private String clientName;
     @NotBlank
     @JsonProperty("transit_account")

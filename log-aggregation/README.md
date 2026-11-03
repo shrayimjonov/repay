@@ -5,7 +5,8 @@ Centralized request/audit logging: `common-logging` library plus `logging-rest` 
 Part of [repay](../README.md).
 
 ```bash
-./mvnw spring-boot:run
+./mvnw install                                  # builds common-logging and logging-rest
+./mvnw -pl logging-rest spring-boot:run          # starts the REST API
 ```
 
 Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).

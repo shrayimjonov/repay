@@ -41,7 +41,7 @@ data class LoanCardsResult(
     var pan: String? = null,
 
     @JsonProperty("holder")
-    @Schema(name = "holder", example = "NODIRBEK SIROJIDDINOV", description = "card holder")
+    @Schema(name = "holder", example = "TOSHMAT ESHMATOV", description = "card holder")
     var holder: String? = null,
 
     @JsonProperty("phone")

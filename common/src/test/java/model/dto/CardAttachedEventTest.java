@@ -8,7 +8,7 @@ import uz.repay.common.model.event.CardAttachedEvent;
 
 
 public class CardAttachedEventTest {
-    private final static String HOLDER = "SIROJIDDINOV NODIRBEK";
+    private final static String HOLDER = "ESHMATOV TOSHMAT";
     private final static String PAN = "561468******7308";
     private final static String LOAN_EXT_ID = "01121158076";
     private final static String PHONE = "998901234567";

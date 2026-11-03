@@ -20,7 +20,7 @@ public class NotificationParams {
 
     @NotBlank
     @JsonProperty("fullName")
-    @Schema(name = "fullName", example = "SIROJIDDINOV NODIRBEK", requiredMode = Schema.RequiredMode.REQUIRED, description = "Full name of card holder")
+    @Schema(name = "fullName", example = "ESHMATOV TOSHMAT", requiredMode = Schema.RequiredMode.REQUIRED, description = "Full name of card holder")
     private String fullName;
 
 

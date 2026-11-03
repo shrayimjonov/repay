@@ -131,8 +131,6 @@ public class MessageRedisServiceImpl implements MessageRedisService {
         if (card.matches("\\d{16}$|\\d{6}\\*{6}\\d{4}$"))
             card = CardUtils.encryptPan(card);
 
-        System.err.println(card);
-
         log.info("Create OTP for phone: {} and card: {}", phone, card);
         var optionalMessage = findByPhone(card, phone);
 

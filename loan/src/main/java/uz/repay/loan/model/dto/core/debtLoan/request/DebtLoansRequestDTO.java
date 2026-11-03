@@ -22,7 +22,7 @@ public class DebtLoansRequestDTO extends PageParams {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class AllDebtLoanParams {
-        @Schema(name = "debtLoanName", example = "AYIBJONOV SHOHRUX KAMOLJON OGLI", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Client name")
+        @Schema(name = "debtLoanName", example = "ESHMATOV TOSHMAT TESHABOY OGLI", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Client name")
         @JsonProperty("debtLoanName")
         private String name;
 

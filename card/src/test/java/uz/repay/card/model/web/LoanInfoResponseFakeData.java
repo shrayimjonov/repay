@@ -13,7 +13,7 @@ public class LoanInfoResponseFakeData {
     public static ResultData<LoanInfoResponse> buildSuccessResponse() {
         LoanInfoResponse loanInfoResponse = new LoanInfoResponse();
         loanInfoResponse.setMfo(Branch._01121.getCode());
-        loanInfoResponse.setClientName("SIROJIDDINOV NODIRBEK SHAXOBJONOVICH");
+        loanInfoResponse.setClientName("ESHMATOV TOSHMAT TESHABOYEVICH");
         loanInfoResponse.setBirthday("1996-08-29");
         loanInfoResponse.setMainAccountBalance(0L);
         loanInfoResponse.setPrincipalBalance(39859658L);

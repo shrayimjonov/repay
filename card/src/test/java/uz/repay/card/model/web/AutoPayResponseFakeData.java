@@ -28,14 +28,14 @@ public class AutoPayResponseFakeData {
         var autoPayCard1 = new SVGateAutoPayCardsResult(
                 PanFake.AUTOPAY_TOKEN_1,
                 "626273******1117",
-                "ABDUJABBOROV FURKAT",
+                "TESTOV TEST",
                 "998901234567"
         );
 
         var autoPayCard2 = new SVGateAutoPayCardsResult(
                 PanFake.AUTOPAY_TOKEN_2,
                 "998901234567",
-                "ASAMOV MURODXOJA",
+                "SAMPLEV SAMPLE",
                 "998901234567"
         );
 

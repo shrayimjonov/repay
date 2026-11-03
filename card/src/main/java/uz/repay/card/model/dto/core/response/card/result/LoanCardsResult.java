@@ -36,7 +36,7 @@ public class LoanCardsResult {
     private String pan;
 
     @JsonProperty("holder")
-    @Schema(name = "holder", example = "NODIRBEK SIROJIDDINOV", description = "card holder")
+    @Schema(name = "holder", example = "TOSHMAT ESHMATOV", description = "card holder")
     private String holder;
 
     @JsonProperty("phone")

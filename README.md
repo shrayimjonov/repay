@@ -5,7 +5,7 @@ national payment systems, debits overdue loans automatically, accepts payments, 
 court/collection workflows and produces repayment reports.
 
 > **Context.** Built by the Davrbank engineering team. I work there as a Backend Engineer (Oct 2025 – present) and
-> contributed mainly to the card, auto-debit, payment, logging and API-gateway services. Published as a portfolio sample with all
+> contributed mainly to the card, auto-debit, payment and log-aggregation services. Published as a portfolio sample with all
 > confidential data removed — see [Security & sanitization](#security--sanitization).
 
 ## Architecture
@@ -36,16 +36,16 @@ court/collection workflows and produces repayment reports.
 | `scoring` | Customer scoring and card limits | Java 21 |
 | `report` | Repayment reports (PDF/Excel) | Java 21, ClickHouse, iText, POI |
 | `notification` | SMS/push notifications | Java 23, Kafka, MongoDB |
-| `client`, `court`, `user`, `processing`, `payment-frame`, `lg-protocol`, `log-protocol` | Customers, court cases, users, processing-center integration, logging protocols | Kotlin, Spring Boot 3.4 |
+| `client`, `court`, `user`, `processing`, `payment-frame`, `lg-protocol`, `log-protocol` | Customers, court cases, users, processing-center integration, logging protocols | Kotlin, Spring Boot 3.3–3.4 |
 | `file`, `chat`, `trusted-user`, `keycloak-*` | File storage (MinIO), support chat (WebSocket), OTP/trusted users, custom Keycloak providers | Java |
 | `common`, `autoconfig` | Shared DTOs and auto-configuration starter | Java |
-| `paymo-add`, `telegrambot` | Legacy Paymo integration (Java 8, Oracle) and Telegram bot | Java / Python |
+| `paymo-add`, `telegrambot` | Legacy Paymo integration (Java 8 / Kotlin, Spring Boot 2.7, Oracle) and Telegram bot | Java, Kotlin / Python |
 
 ⭐ = services I contributed to most (card ≈237 commits, autodebit ≈158, payment ≈117, log-aggregation 52 of 61).
 
 ## Tech stack
 
-**Java 21/23 · Kotlin · Spring Boot 3.1–3.4 · Spring Cloud (Gateway, OpenFeign, Consul, Eureka) · Kafka ·
+**Java 17/21/23 · Kotlin · Spring Boot 3.1–3.4 (legacy 2.7) · Spring Cloud (Gateway, OpenFeign, Consul, Eureka) · Kafka ·
 PostgreSQL · MongoDB · Redis · ClickHouse · Keycloak · Liquibase · Quartz · Micrometer/Zipkin ·
 Docker · Maven/Gradle**
 

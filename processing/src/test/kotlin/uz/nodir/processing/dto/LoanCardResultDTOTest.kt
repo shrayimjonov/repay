@@ -20,7 +20,7 @@ class LoanCardResultDTOTest {
         private val successMasterCard = LoanCardsResult(
             id = CARD_ID,
             pan = "527375******9328",
-            holder = "NODIRBEK SIROJIDDINOV",
+            holder = "TOSHMAT ESHMATOV",
             phone = "998901234567",
             sms = true,
             amount = 122679,
@@ -48,7 +48,7 @@ class LoanCardResultDTOTest {
             0,
             122679,
             "998901234567",
-            "NODIRBEK SIROJIDDINOV",
+            "TOSHMAT ESHMATOV",
             0,
             "60272385",
             "22618000260272385362",

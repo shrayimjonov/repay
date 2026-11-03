@@ -17,10 +17,10 @@ public class LoanEntity {
         loan.setTin("609800230");
         loan.setBirthday("1996-08-29 00:00:00");
         loan.setExtId("01121158076");
-        loan.setPayerName("SIROJIDDINOV NODIRBEK SHAXOBJONOVICH");
-        loan.setSurname("SIROJIDDINOV");
-        loan.setFirstName("NODIRBEK");
-        loan.setPatronymic("SHAXOBJONOVICH");
+        loan.setPayerName("ESHMATOV TOSHMAT TESHABOYEVICH");
+        loan.setSurname("ESHMATOV");
+        loan.setFirstName("TOSHMAT");
+        loan.setPatronymic("TESHABOYEVICH");
         loan.setIsDeleted(false);
         loan.setPassportSerial("AD");
         loan.setPassportNumber("1311158");

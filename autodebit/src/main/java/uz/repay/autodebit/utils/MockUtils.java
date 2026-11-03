@@ -11,7 +11,7 @@ public class MockUtils {
     public static DebtLoansResult mockOneDebtLoan() {
         return new DebtLoansResult(
                 1L,
-                "AZIMOV ZAFAR",
+                "ESHMATOV TOSHMAT",
                 "998901234567",
                 "0098127386",
                 "00981",

@@ -18,7 +18,7 @@ public class NotificationDebtMessageRequestDTO {
     @Schema(name = "amount", example = "31240032", description = "debit amount")
     private Long amount = 0L;
     @JsonProperty("full_name")
-    @Schema(name = "full_name", example = "AZAMOV TAVAKKAL FURQAT O'G'LI", description = "debtor full name")
+    @Schema(name = "full_name", example = "ESHMATOV TOSHMAT TESHABOY O'G'LI", description = "debtor full name")
     private String debtor;
     @JsonProperty("language")
     @Schema(name = "language", example = "RU", description = "message language")

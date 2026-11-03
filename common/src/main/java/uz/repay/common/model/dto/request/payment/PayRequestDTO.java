@@ -37,7 +37,7 @@ public class PayRequestDTO {
     @Valid
     @Schema(name = "params", example = "{\n" +
             "        \"cardPan\" : \"561468******7308\",\n" +
-            "        \"cardOwner\" : \"N SH SIROJIDDINOV\",\n" +
+            "        \"cardOwner\" : \"T T ESHMATOV\",\n" +
             "        \"payer\" : \"BORROWER\"\n" +
             "    }", requiredMode = Schema.RequiredMode.REQUIRED, description = "Save card info to database nothing else")
     private PayParams params;
@@ -47,7 +47,7 @@ public class PayRequestDTO {
     @NotNull
     @Schema(name = "notificationParams", example = "{\n" +
             "        \"phone\" : \"998901234567\",\n" +
-            "        \"fullName\" : \"SIROJIDDINOV NODIRBEK\",\n" +
+            "        \"fullName\" : \"ESHMATOV TOSHMAT\",\n" +
             "        \"loanId\" : 85600\n" +
             "    }", requiredMode = Schema.RequiredMode.REQUIRED, description = "Notification data for sending message")
     private NotificationParams notificationParams;
@@ -60,7 +60,7 @@ public class PayRequestDTO {
         @Schema(name = "cardPan", example = "860051******0293", requiredMode = Schema.RequiredMode.REQUIRED, description = "Card masked pan")
         private String cardPan;
         @NotBlank
-        @Schema(name = "cardOwner", example = "SIROJIDDINOV NODIRBEK SH", requiredMode = Schema.RequiredMode.REQUIRED, description = "Card holder name")
+        @Schema(name = "cardOwner", example = "ESHMATOV TOSHMAT SH", requiredMode = Schema.RequiredMode.REQUIRED, description = "Card holder name")
         private String cardOwner;
         @NotNull
         @Schema(name = "payer", example = "GUARANTOR", requiredMode = Schema.RequiredMode.REQUIRED, description = "Card holder type")
