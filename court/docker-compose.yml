@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    image: court-image
+    build: .
+    container_name: court
+    ports:
+      - "8725:8725"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx512m -Xms256m
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-Duser.timezone=Asia/Tashkent", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true
+

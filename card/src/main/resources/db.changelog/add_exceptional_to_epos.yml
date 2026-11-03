@@ -1,0 +1,15 @@
+databaseChangeLog:
+    - changeSet:
+          id: add-exceptional-column-to-epos
+          author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+          comment: "_____SQL_EXECUTED_____"
+          changes:
+              - addColumn:
+                    tableName: epos
+                    columns:
+                        - column:
+                              name: exceptional
+                              type: boolean
+                              defaultValueBoolean: false
+                              constraints:
+                                  nullable: false

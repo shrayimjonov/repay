@@ -1,0 +1,80 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1734959562852-4
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: court_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: loan_ext_id
+                  type: VARCHAR(255)
+              - column:
+                  name: message
+                  type: VARCHAR(255)
+              - column:
+                  name: phone
+                  type: VARCHAR(255)
+              - column:
+                  name: execute_date
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: job_id
+                  type: UUID
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: date
+              - column:
+                  name: init_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: modified_by
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+            schemaName: court
+            tableName: court
+  - changeSet:
+      id: 1734959562852-25
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: loan_ext_id
+            indexName: court_loanextid_ind
+            schemaName: court
+            tableName: court
+  - changeSet:
+      id: 1734959562852-26
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - addUniqueConstraint:
+            columnNames: loan_ext_id, execute_date
+            constraintName: court_loanextid_executedate_un
+            schemaName: court
+            tableName: court
+  - changeSet:
+      id: 1734959562852-27
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: court
+            sequenceName: court_seq
+            startValue: 1

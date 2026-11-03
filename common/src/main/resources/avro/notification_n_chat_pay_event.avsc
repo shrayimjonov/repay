@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "NotificationPayEvent",
+  "namespace": "uz.repay.common.generated.model.event",
+  "fields": [
+    {
+      "name": "loanExtId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "pan",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "amount",
+      "type": ["null", "long"],
+      "default": null
+    },
+    {
+      "name": "username",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: auto-debit
+  profiles:
+    active: test
+server:
+  port: 8715
+  servlet:
+    context-path: /autodebit

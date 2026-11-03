@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: report
+  profiles:
+    active: test
+server:
+  port: 8818
+  servlet:
+    context-path: /report

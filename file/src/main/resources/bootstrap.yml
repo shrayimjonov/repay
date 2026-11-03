@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: file
+  profiles:
+    active: test
+server:
+  port: 8705
+  servlet:
+    context-path: /file

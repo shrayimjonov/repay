@@ -1,0 +1,50 @@
+databaseChangeLog:
+
+  - include:
+      file: /transaction_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /bill_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /temporary_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: db.changelog/DML/bill_general_id_2_ref_num.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: /backlash_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: db.changelog/DML/alter_backlash_add_upd_column.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/add_ip_and_terminal_columns_2_transaction_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/add_type_2_backlash_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: /DML/add_pcMaintenance_and_settings_tables.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/add_rate_2_transaction_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/add_currency_2_bill_and_transaction_tables.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/migrate_ip_field_from_transaction_to_bill_table.sql
+      relativeToChangelogFile: true
+

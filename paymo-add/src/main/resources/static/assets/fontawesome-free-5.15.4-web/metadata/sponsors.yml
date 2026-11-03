@@ -1,0 +1,744 @@
+accusoft:
+  icons:
+    - accusoft
+  label: Accusoft
+  url: '${ACCUSOFT_URL}'
+administrator-technology:
+  icons:
+    - stream
+  label: Administrator Technology
+  url: '${ADMINISTRATOR_TECHNOLOGY_URL}'
+adversal:
+  icons:
+    - adversal
+  label: Adversal
+  url: '${ADVERSAL_URL}'
+affiliatetheme:
+  icons:
+    - affiliatetheme
+  label: affiliatetheme
+  url: '${AFFILIATETHEME_URL}'
+algolia:
+  icons:
+    - algolia
+  label: Algolia
+  url: '${ALGOLIA_URL}'
+amazon-web-services:
+  icons:
+    - aws
+  label: Amazon Web Services
+  url: '${AMAZON_WEB_SERVICES_URL}'
+amilia:
+  icons:
+    - amilia
+  label: Amilia
+  url: '${AMILIA_URL}'
+angry-creative:
+  icons:
+    - angrycreative
+  label: Angry Creative
+  url: '${ANGRY_CREATIVE_URL}'
+app-signal:
+  icons:
+    - stroopwafel
+  label: AppSignal
+  url: '${APP_SIGNAL_URL}'
+apper-systems-ab:
+  icons:
+    - apper
+  label: Apper Systems AB
+  url: '${APPER_SYSTEMS_AB_URL}'
+'asymmetrik,ltd':
+  icons:
+    - asymmetrik
+  label: 'Asymmetrik, Ltd.'
+  url: '${APPER_SYSTEMS_AB_URL}'
+ausmed-education:
+  icons:
+    - user-nurse
+  label: Ausmed Education
+  url: '${AUSMED_EDUCATION_URL}'
+avianex:
+  icons:
+    - avianex
+  label: avianex
+  url: '${AVIANEX_URL}'
+bi-mobject:
+  icons:
+    - bimobject
+  label: BIMobject
+  url: '${BI_MOBJECT_URL}'
+bity:
+  icons:
+    - bity
+  label: Bity
+  url: '${BITY_URL}'
+blackpulp-designs:
+  icons:
+    - pray
+  label: Blackpulp Designs
+  url: '${BLACKPULP_DESIGNS_URL}'
+blissbook:
+  icons:
+    - pen-fancy
+  label: Blissbook
+  url: '${BLISSBOOK_URL}'
+büromöbel-experte-gmb-h &co-kg:
+  icons:
+    - buromobelexperte
+  label: Büromöbel-Experte GmbH & Co. KG.
+  url: '${BLISSBOOK_URL}'
+c-panel:
+  icons:
+    - cpanel
+  label: cPanel
+  url: '${C_PANEL_URL}'
+centercode:
+  icons:
+    - centercode
+  label: Centercode
+  url: '${CENTERCODE_URL}'
+cibltd:
+  icons:
+    - drum-steelpan
+  label: Comprehensive Insurance Brokers Limited
+  url: '${CIBLTD_URL}'
+clear-blue-technologies:
+  icons:
+    - solar-panel
+  label: Clear Blue Technologies
+  url: '${CLEAR_BLUE_TECHNOLOGIES_URL}'
+cloudflare:
+  icons:
+    - cloudflare
+  label: Cloudflare
+  url: '${CLOUDFLARE_URL}'
+cloudscale-ch:
+  icons:
+    - cloudscale
+  label: cloudscale.ch
+  url: '${CLOUDSCALE_CH_URL}'
+cloudsmith:
+  icons:
+    - cloudsmith
+  label: Cloudsmith
+  url: '${CLOUDSMITH_URL}'
+cloudversify:
+  icons:
+    - cloudversify
+  label: cloudversify
+  url: '${CLOUDVERSIFY_URL}'
+cuttlefish:
+  icons:
+    - cuttlefish
+  label: Cuttlefish
+  url: '${CUTTLEFISH_URL}'
+cymedica:
+  icons:
+    - wave-square
+  label: CyMedica
+  url: '${CYMEDICA_URL}'
+darren-wiebe:
+  icons:
+    - church
+  label: Darren Wiebe
+deploy-dog:
+  icons:
+    - deploydog
+  label: deploy.dog
+  url: '${DEPLOY_DOG_URL}'
+deskpro:
+  icons:
+    - deskpro
+  label: Deskpro
+  url: '${DESKPRO_URL}'
+discourse:
+  icons:
+    - discourse
+  label: Discourse
+  url: '${DISCOURSE_URL}'
+doc-hub:
+  icons:
+    - dochub
+  label: DocHub
+  url: '${DOC_HUB_URL}'
+draft2-digital:
+  icons:
+    - draft2digital
+  label: Draft2Digital
+  url: '${DRAFT2_DIGITAL_URL}'
+dyalog-apl:
+  icons:
+    - dyalog
+  label: Dyalog APL
+  url: '${DYALOG_APL_URL}'
+econopublish:
+  icons:
+    - hat-cowboy-side
+  label: EconoPublish
+  url: '${ECONOPUBLISH_URL}'
+firstdraft:
+  icons:
+    - firstdraft
+  label: firstdraft
+  url: '${FIRSTDRAFT_URL}'
+fleetplan:
+  icons:
+    - helicopter
+  label: FLEETPLAN
+  url: '${FLEETPLAN_URL}'
+getaroom:
+  icons:
+    - archway
+    - dumbbell
+    - hotel
+    - map-marked
+    - map-marked-alt
+    - monument
+    - spa
+    - swimmer
+    - swimming-pool
+  label: getaroom
+  url: '${GETAROOM_URL}'
+git-kraken:
+  icons:
+    - gitkraken
+  label: GitKraken
+  url: '${GIT_KRAKEN_URL}'
+gofore:
+  icons:
+    - gofore
+  label: Gofore
+  url: '${GOFORE_URL}'
+'gripfire,inc':
+  icons:
+    - gripfire
+  label: 'Gripfire, Inc.'
+  url: '${GOFORE_URL}'
+guilded:
+  icons:
+    - guilded
+  label: Guilded
+  url: '${GUILDED_URL}'
+harvard-medical-school:
+  icons:
+    - allergies
+    - ambulance
+    - band-aid
+    - briefcase-medical
+    - burn
+    - capsules
+    - diagnoses
+    - dna
+    - file-medical
+    - file-medical-alt
+    - first-aid
+    - heart
+    - heartbeat
+    - hospital
+    - hospital-alt
+    - hospital-symbol
+    - id-card-alt
+    - notes-medical
+    - pills
+    - plus
+    - prescription-bottle
+    - prescription-bottle-alt
+    - procedures
+    - smoking
+    - stethoscope
+    - syringe
+    - tablets
+    - thermometer
+    - user-md
+    - vial
+    - vials
+    - weight
+    - x-ray
+  label: Harvard Medical School
+  url: '${HARVARD_MEDICAL_SCHOOL_URL}'
+hips:
+  icons:
+    - hips
+  label: Hips
+  url: '${HIPS_URL}'
+hire-a-helper:
+  icons:
+    - archive
+    - box-open
+    - couch
+    - dolly
+    - people-carry
+    - route
+    - sign
+    - suitcase
+    - tape
+    - truck-loading
+    - truck-moving
+    - wine-glass
+  label: HireAHelper
+  url: '${HIRE_A_HELPER_URL}'
+hive:
+  icons:
+    - hive
+  label: Hive Blockchain Network
+  url: '${HIVE_URL}'
+hornbill:
+  icons:
+    - hornbill
+  label: Hornbill
+  url: '${HORNBILL_URL}'
+hotjar:
+  icons:
+    - hotjar
+  label: Hotjar
+  url: '${HOTJAR_URL}'
+hub-spot:
+  icons:
+    - hubspot
+  label: HubSpot
+  url: '${HUB_SPOT_URL}'
+in-site-systems:
+  icons:
+    - toolbox
+  label: InSite Systems
+  url: '${IN_SITE_SYSTEMS_URL}'
+innosoft:
+  icons:
+    - innosoft
+  label: Innosoft
+  url: '${INNOSOFT_URL}'
+inspira-bvba:
+  icons:
+    - chess-knight
+  label: Inspira bvba
+  url: '${INSPIRA_BVBA_URL}'
+instalod:
+  icons:
+    - instalod
+  label: InstaLOD
+  url: '${INSTALOD_URL}'
+joe-emison:
+  icons:
+    - blender-phone
+  label: Joe Emison
+joget:
+  icons:
+    - joget
+  label: Joget
+  url: '${JOGET_URL}'
+jon-galloway:
+  icons:
+    - crow
+  label: Jon Galloway
+kevin-barone:
+  icons:
+    - file-contract
+  label: Kevin Barone
+key-cdn:
+  icons:
+    - keycdn
+  label: KeyCDN
+  url: '${KEY_CDN_URL}'
+korvue:
+  icons:
+    - korvue
+  label: Korvue
+  url: '${KORVUE_URL}'
+max-elman:
+  icons:
+    - frog
+  label: Max Elman
+med-apps:
+  icons:
+    - medapps
+  label: MedApps
+  url: '${MED_APPS_URL}'
+medapps:
+  icons:
+    - book-medical
+    - clinic-medical
+    - comment-medical
+    - crutch
+    - disease
+    - hospital-user
+    - laptop-medical
+    - pager
+  label: MedApps
+  url: '${MEDAPPS_URL}'
+megaport:
+  icons:
+    - megaport
+  label: Megaport
+  url: '${MEGAPORT_URL}'
+mix:
+  icons:
+    - mix
+  label: Mix
+  url: '${MIX_URL}'
+mizuni:
+  icons:
+    - mizuni
+  label: Mizuni
+  url: '${MIZUNI_URL}'
+mrt:
+  icons:
+    - medrt
+  label: MRT
+  url: '${MRT_URL}'
+mylogin-info:
+  icons:
+    - user-shield
+  label: mylogin.info
+  url: '${MYLOGIN_INFO_URL}'
+napster:
+  icons:
+    - napster
+  label: Napster
+  url: '${NAPSTER_URL}'
+nimblr:
+  icons:
+    - nimblr
+  label: Nimblr
+  url: '${NIMBLR_URL}'
+nompse:
+  icons:
+    - chalkboard
+    - chalkboard-teacher
+  label: Nomp.se
+  url: '${NOMPSE_URL}'
+ns8:
+  icons:
+    - ns8
+  label: NS8
+  url: '${NS8_URL}'
+nutritionix:
+  icons:
+    - nutritionix
+  label: Nutritionix
+  url: '${NUTRITIONIX_URL}'
+octopus-deploy:
+  icons:
+    - octopus-deploy
+  label: Octopus Deploy
+  url: '${OCTOPUS_DEPLOY_URL}'
+page4-corporation:
+  icons:
+    - page4
+  label: page4 Corporation
+  url: '${PAGE4_CORPORATION_URL}'
+pal-fed:
+  icons:
+    - palfed
+  label: PalFed
+  url: '${PAL_FED_URL}'
+patch-patrol:
+  icons:
+    - vest
+    - vest-patches
+  label: Patch Patrol
+  url: '${PATCH_PATROL_URL}'
+pcsg:
+  icons:
+    - horse-head
+  label: PCSG
+  url: '${PCSG_URL}'
+perbyte:
+  icons:
+    - perbyte
+  label: PerByte
+  url: '${PERBYTE_URL}'
+phabricator:
+  icons:
+    - phabricator
+  label: Phabricator
+  url: '${PHABRICATOR_URL}'
+promo-wizard:
+  icons:
+    - hat-wizard
+  label: Promo Wizard
+  url: '${PROMO_WIZARD_URL}'
+pulse-eight:
+  icons:
+    - volume-mute
+  label: Pulse-Eight
+  url: '${PULSE_EIGHT_URL}'
+purely-interactive:
+  icons:
+    - kiwi-bird
+  label: Purely Interactive
+  url: '${PURELY_INTERACTIVE_URL}'
+pushed:
+  icons:
+    - pushed
+  label: Pushed
+  url: '${PUSHED_URL}'
+quin-scape:
+  icons:
+    - quinscape
+  label: QuinScape
+  url: '${QUIN_SCAPE_URL}'
+reacteurope:
+  icons:
+    - reacteurope
+  label: ReactEurope
+  url: '${REACTEUROPE_URL}'
+readme-io:
+  icons:
+    - readme
+  label: Readme.io
+  url: '${README_IO_URL}'
+red-river:
+  icons:
+    - red-river
+  label: red river
+  url: '${RED_RIVER_URL}'
+replyd:
+  icons:
+    - replyd
+  label: replyd
+resolving:
+  icons:
+    - resolving
+  label: Resolving
+  url: '${RESOLVING_URL}'
+rev-io:
+  icons:
+    - rev
+  label: Rev.io
+  url: '${REV_IO_URL}'
+rock-rms:
+  icons:
+    - rockrms
+  label: Rock RMS
+  url: '${ROCK_RMS_URL}'
+rocket-chat:
+  icons:
+    - comment
+    - comment-alt
+    - comment-dots
+    - comment-slash
+    - comments
+    - frown
+    - meh
+    - phone
+    - phone-slash
+    - poo
+    - quote-left
+    - quote-right
+    - rocketchat
+    - smile
+    - video
+    - video-slash
+  label: Rocket.Chat
+  url: '${ROCKET_CHAT_URL}'
+rodney-oliver:
+  icons:
+    - folder-minus
+    - folder-plus
+  label: Rodney Oliver
+schlix:
+  icons:
+    - schlix
+  label: SCHLIX
+  url: '${SCHLIX_URL}'
+search-eng-in:
+  icons:
+    - searchengin
+  label: SearchEng.in
+  url: '${SEARCH_ENG_IN_URL}'
+service-stack:
+  icons:
+    - servicestack
+  label: ServiceStack
+  url: '${SERVICE_STACK_URL}'
+shawn-storie:
+  icons:
+    - teeth
+    - teeth-open
+  label: Shawn Storie
+shopware:
+  icons:
+    - shopware
+  label: Shopware
+  url: '${SHOPWARE_URL}'
+shp:
+  icons:
+    - school
+  label: SHP
+  url: '${SHP_URL}'
+silicon-barn-inc:
+  icons:
+    - project-diagram
+  label: Silicon Barn Inc
+  url: '${SILICON_BARN_INC_URL}'
+sistrix:
+  icons:
+    - sistrix
+  label: SISTRIX
+  url: '${SISTRIX_URL}'
+smup:
+  icons:
+    - shoe-prints
+  label: Smup
+  url: '${SMUP_URL}'
+speakap:
+  icons:
+    - speakap
+  label: Speakap
+  url: '${SPEAKAP_URL}'
+stay-linked:
+  icons:
+    - box
+    - boxes
+    - clipboard-check
+    - clipboard-list
+    - dolly
+    - dolly-flatbed
+    - pallet
+    - shipping-fast
+    - truck
+    - warehouse
+  label: StayLinked
+  url: '${STAY_LINKED_URL}'
+sticker-mule:
+  icons:
+    - sticker-mule
+  label: Sticker Mule
+  url: '${STICKER_MULE_URL}'
+studio-vinari:
+  icons:
+    - studiovinari
+  label: Studio Vinari
+  url: '${STUDIO_VINARI_URL}'
+supple:
+  icons:
+    - ad
+    - bullhorn
+    - bullseye
+    - comment-dollar
+    - comments-dollar
+    - envelope-open-text
+    - funnel-dollar
+    - mail-bulk
+    - poll
+    - poll-h
+    - search-dollar
+    - search-location
+    - supple
+  label: Supple
+  url: '${SUPPLE_URL}'
+the-red-yeti:
+  icons:
+    - the-red-yeti
+  label: The Red Yeti
+  url: '${THE_RED_YETI_URL}'
+the-us-sunnah-foundation:
+  icons:
+    - dollar-sign
+    - donate
+    - dove
+    - gift
+    - globe
+    - hand-holding-heart
+    - hand-holding-usd
+    - hand-holding-water
+    - hands-helping
+    - handshake
+    - heart
+    - leaf
+    - parachute-box
+    - piggy-bank
+    - ribbon
+    - seedling
+  label: The us-Sunnah Foundation
+  url: '${THE_US_SUNNAH_FOUNDATION_URL}'
+themeco:
+  icons:
+    - themeco
+  label: Themeco
+  url: '${THEMECO_URL}'
+think-peaks:
+  icons:
+    - think-peaks
+  label: Think Peaks
+  url: '${THINK_PEAKS_URL}'
+typo3:
+  icons:
+    - typo3
+  label: Typo3
+  url: '${TYPO3_URL}'
+uncharted:
+  icons:
+    - uncharted
+  label: Uncharted Software
+  url: '${UNCHARTED_URL}'
+uniregistry:
+  icons:
+    - uniregistry
+  label: Uniregistry
+  url: '${UNIREGISTRY_URL}'
+us-sunnah-foundation:
+  icons:
+    - ussunnah
+  label: us-Sunnah Foundation
+  url: '${US_SUNNAH_FOUNDATION_URL}'
+vaadin:
+  icons:
+    - vaadin
+  label: Vaadin
+  url: '${VAADIN_URL}'
+via:
+  icons:
+    - car-crash
+    - draw-polygon
+    - house-damage
+    - layer-group
+    - skull-crossbones
+    - user-injured
+  label: VIA Traffic Software Solutions
+  url: '${VIA_URL}'
+victor-costan:
+  icons:
+    - otter
+  label: Staphany Park and Victor Costan
+vnv:
+  icons:
+    - vnv
+  label: VNV
+  url: '${VNV_URL}'
+watchman-monitoring:
+  icons:
+    - watchman-monitoring
+  label: Watchman Monitoring
+  url: '${WATCHMAN_MONITORING_URL}'
+weedable:
+  icons:
+    - bong
+    - cannabis
+    - hippo
+    - joint
+    - mortar-pestle
+    - prescription
+  label: Weedable
+  url: '${WEEDABLE_URL}'
+whmcs:
+  icons:
+    - whmcs
+  label: WHMCS
+  url: '${WHMCS_URL}'
+wodu:
+  icons:
+    - wodu
+  label: Wodu Media
+  url: '${WODU_URL}'
+workrails:
+  icons:
+    - briefcase
+  label: WorkRails
+  url: '${WORKRAILS_URL}'
+wpressr:
+  icons:
+    - wpressr
+  label: wpressr
+  url: '${WPRESSR_URL}'

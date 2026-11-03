@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: payment
+  profiles:
+    active: test
+server:
+  port: 8710
+  servlet:
+    context-path: /payment

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: chat
+  profiles:
+    active: prod
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+        instance-id: ${spring.application.name}:${random.value}
+      host: 127.0.0.1
+      port: 8500

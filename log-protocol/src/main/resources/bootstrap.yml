@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: log-protocol
+  profiles:
+    active: test
+server:
+  port: 8750
+  servlet:
+    context-path: /logprotocol

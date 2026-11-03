@@ -1,0 +1,154 @@
+﻿codeNum,codeMessage
+-200, Card not found
+-201," Card expired, capture card"
+-202," Pan invalid, wrong format"
+-100, Empty parameters
+-101,"Error while executing the request, try again"
+-102," Error while executing the request, try again"
+-103, Checkout required fields
+-199, JsonRpc ERROR -203 Card not re-issue
+-204, Card status is not active
+-205, Card blocked
+-206,SMS is not active
+-300,"Service not available, try again later"
+-301,Check out the trans.ext method later
+-302, Check out the trans.ext method later
+-303,"Service not available, try again later"
+-304,"Service not available, try again later"
+-305,"Service not available, try again later"
+-306,"Service not available, try again later"
+-307, Time out SV
+-308, Check out the trans.ext method later
+-309,Check out the trans.ext method later
+-310, Check out the trans.ext method later
+-311, Check out the trans.ext method later
+-318, Type terminal debit is not selected at the time of registration
+-320,The phone number attached to the card and the requesting phone number do not match
+-207, Transaction already exists in the database
+-208, Transaction not found
+-209, Wrong format
+-210,Transfer between the same cards not possible
+-211,"Server is not responding, try again later"
+-212," Pan or expiry invalid, wrong format"
+-213,Card numbers are the same
+-214, Invalid date  Date must not be less than or equal to the current
+-215, Pan and phone not found
+-216, Expiration date incorrect
+-217,Wrong phone number format
+-218, The length of the card number must be 6 digits
+-219, The card has already entered to main cards
+-220, The card is added to main cards
+-221, The card is not main
+0, The card is added to main cards
+-222, OLD and NEW main cards are not in the same account
+-223, OLD_MAIN is not exist
+-224,Phone numbers are not same
+-225, NEW_MAIN is expired
+-226, NEW_MAIN is not exist
+-227, OLD_MAIN is not exist
+-228, Limit not found
+-229, Family card error
+-230, Can not set limit to main card
+-231,Main card error
+-232,There are not main cards in this account
+-233,There is other main card in this account
+-234, This card is main
+-235, Supported card not found
+-236,Supported terminal not found
+-237,Merchant not found
+-238,Account not found
+-239,Improper funds for holding
+-240, Insufficient funds
+-241, Wrong period for holding
+-242,Hold not found
+-243, Device not found
+-244, Service is temporarily unavailable for this bank
+-245,Amount does not fit
+-246,Payment to this provider is prohibited
+-247,EPOS does not exist
+-248, Card valid
+-249, Terminal Id and Merchant Id already exists in the database
+-250,Wrong Terminal type
+-251,Wrong format Terminal Id
+-252,Wrong format Merchant Id
+-253, Terminal Id and Merchant Id not found in SV
+-254,Terminal Id and Merchant Id not found in the database
+-255,Terminal Id and Merchant Id not registered
+-256, You do not have access to the method
+-257,Token not found
+-258, Operation is not possible with corporate cards
+-259,The amountCredit should not exceed the amount
+-260,Insufficient funds – retry
+-261,Card was blocked in SVGate. Will be unclocked in
+-262, Allowed amount exceeded
+-263,StatusId should be between 0-21
+-264,MCC code not found
+-265, UNKNOWN EXCEPTION IN PACKAGE
+-266,SMS is already activated
+-267, Transaction not found in SV
+-268,EPOS is not authorized
+-269, OTP is not correct
+-270, OTP has expired
+-271, Token already exist
+-272,You do not have access to the status
+-273,You do not have access to receive card information
+-274,You do not have access to change card status
+-275," The card does not belong to your bank, you cannot change the status of the card"
+-276, The card does not belong to your bank
+-277, The number attached to the card and the send number don't match
+-278, SMS informing is already active
+-279,The card is not main
+-280, Information not found
+-281," Error while executing the request, try again"
+-282,Transaction not found or transaction was canceled
+-283, ATTO PAY Exception
+-284, ATTO Check Card Exception
+-285, ATTO Card not found
+-286, EPOS not found
+-287, User not found
+-288, Actions not found
+-289, Card not blocked
+-290," Phone invalid, wrong format"
+-291, Access denied
+-292," Error sending SMS, try again later"
+-293, Daily pin reset limit used
+-294, Request pin reset not found
+-295,You do not have access to a sms-notification activation
+-296,"The card does not belong to your bank, you cannot you cannot activate sms-notification"
+-297, Phone is not correct
+-298," This is not an EPOS, this is a POS"
+-299,SMS message not found
+-357,"Service not available, try again later (WCard)"
+-356,"Service not available, try again later (WCard)"
+-355,"Service not available, try again later (WCard)"
+-354,"Service not available, try again later (WCard)"
+-353,"Service not available, try again later (WCard)"
+-352,"Service not available, try again later (WCard)"
+-351,"Service not available, try again later (WCard)"
+-350,"Service not available, try again later (WCard)"
+-370, You do not have a monitoring contract
+-371, Card already exists in the database
+-372, History token not found
+-373,Card not found in donate database
+-374, EPOS not activated
+-375,EPOS is already activated
+-376,Phone number not entered
+-377,Only tokens can be sent in this field
+-378,"Error while creating token, try again later"
+-379,You can send no more than 5 tokens
+-380," Transaction successful, if you want to reverse send to trans.reverse method"
+-381, Exceeds the base amount
+-382, BIN not found
+-383,You cannot work with this issuer
+-384, All fields are not filled
+-385,Format Date of Birth is not correct
+-386, Format document expiration date is not correct
+-387, EPOS not authorized for p2p.universal method
+-388,Merchant and credit card do not belong to the same institution
+-389,Repeated reverse transaction
+-390, Code not found
+-392, Сard does not belong to this PINFL
+-393, PINFL not found
+-398, Token created for replenishment only
+-399,WCard errors
+-400,"Service not available, try again later"

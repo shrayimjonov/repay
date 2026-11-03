@@ -1,0 +1,10 @@
+outputChangeLogFile: src/main/resources/db.changelog/db.changelog-master.yaml
+outputDefaultSchema: true
+driver: org.postgresql.Driver
+url: ${URL}
+username: ${USERNAME}
+password: ${PASSWORD}
+includeSchema: true
+includeTablespace: true
+#includeObjects: table
+# mvn liquibase:generateChangeLog

@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - include:
+      file: /DDL/limit_create_table.sql
+      relativeToChangelogFile: true
+
+

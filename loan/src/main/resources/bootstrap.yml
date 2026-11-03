@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: loan
+  profiles:
+    active: test
+server:
+  port: 8706
+  servlet:
+    context-path: /loan

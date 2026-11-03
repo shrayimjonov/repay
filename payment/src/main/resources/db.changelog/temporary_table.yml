@@ -1,0 +1,61 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1707110836706-3
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: temporary_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: add_type
+                  type: VARCHAR(255)
+              - column:
+                  name: amount
+                  type: BIGINT
+              - column:
+                  name: card
+                  type: VARCHAR(255)
+              - column:
+                  name: card_pan
+                  type: VARCHAR(255)
+              - column:
+                  name: card_type
+                  type: VARCHAR(255)
+              - column:
+                  name: loan_ext_id
+                  type: VARCHAR(255)
+              - column:
+                  name: owner
+                  type: VARCHAR(255)
+              - column:
+                  name: payment_id
+                  type: VARCHAR(255)
+              - column:
+                  name: processing
+                  type: VARCHAR(255)
+              - column:
+                  name: tran_id
+                  type: BIGINT
+            schemaName: public
+            tableName: temporary
+
+  - changeSet:
+      id: 1707110836706-9
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: public
+            sequenceName: temp_seq
+            startValue: 1

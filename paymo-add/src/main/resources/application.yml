@@ -1,0 +1,67 @@
+server:
+  port: 8667
+  context-path: /paymo
+
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: ${PRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_KEYCLOAK_CLIENT_ID}
+            client-secret: ${G_SECURITY_OAUTH2_CLIENT_REGISTRATION_KEYCLOAK_CLIENT_SECRET}
+            authorization-grant-type: password
+            scope: openid, profile, roles
+        provider:
+          keycloak:
+            issuer-uri: ${SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_KEYCLOAK_ISSUER_URI}
+
+svgate:
+ # url: https://127.0.0.1:47007/api/jsonrpc
+  url: ${SVGATE_URL}
+  login: ${SVGATE_LOGIN}
+  password: ${SVGATE_PASSWORD}
+  terminals: ${TERMINALS}
+
+genesis:
+  url: ${GENESIS_URL}
+  login: ${GENESIS_LOGIN}
+  terminals: ${TERMINALS}
+
+humo:
+  humoware: http://127.0.0.1:8261
+
+nci:
+  gateway: http://127.0.0.1:8233
+
+logging:
+  file:
+    name: log/paymo_reverse.log
+
+feign:
+  httpclient:
+    disable-ssl-validation: true
+    enabled: true
+  okhttp:
+    enabled: true
+
+
+keycloak:
+  auth-server-url: ${KEYCLOAK_AUTH_SERVER_URL}
+  realm: ${REALM}
+  resource: paymo_reverse
+  public-client: true
+  bearer-only: true
+  ssl-required: none

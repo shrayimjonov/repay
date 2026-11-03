@@ -1,0 +1,22 @@
+databaseChangeLog:
+
+  - include:
+      file: /DML/sms_protocol_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/sms_template_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DDL/insert_push_template.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DDL/add_2_columns_to_sms_protocol_table.sql
+      relativeToChangelogFile: true
+
+
+
+
+

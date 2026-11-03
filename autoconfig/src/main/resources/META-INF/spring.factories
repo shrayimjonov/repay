@@ -1,0 +1,17 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+uz.nodir.repayautoconfigure.configuration.api.SwaggerConfig,\
+uz.nodir.repayautoconfigure.configuration.web.RestTemplateConfig,\
+uz.nodir.repayautoconfigure.configuration.web.AsyncConfig,\
+uz.nodir.repayautoconfigure.configuration.cache.CacheableConfig,\
+uz.nodir.repayautoconfigure.configuration.schedule.ShedlockConfig,\
+uz.nodir.repayautoconfigure.configuration.security.SecurityConfiguration,\
+uz.nodir.repayautoconfigure.configuration.database.PersistenceConfig,\
+uz.nodir.repayautoconfigure.configuration.database.MongoConfiguration,\
+uz.nodir.repayautoconfigure.configuration.api.retry.RetryConfig,\
+uz.nodir.repayautoconfigure.configuration.database.RedisConfig,\
+uz.nodir.repayautoconfigure.configuration.broker.KafkaStringConsumerConfiguration,\
+uz.nodir.repayautoconfigure.configuration.broker.KafkaAvroConsumerConfiguration,\
+uz.nodir.repayautoconfigure.configuration.broker.KafkaStringProducerConfiguration,\
+uz.nodir.repayautoconfigure.configuration.broker.KafkaAvroProducerConfiguration,\
+uz.nodir.repayautoconfigure.configuration.web.EventListenerConfiguration,\
+uz.nodir.repayautoconfigure.configuration.cache.RedissonConfiguration

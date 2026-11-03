@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: card
+  cloud:
+    consul:
+      discovery:
+        tags:
+          - profile=${spring.profiles.active}
+          - context-path=${server.servlet.context-path}
+        prefer-ip-address: true
+        instance-id: ${spring.application.name}:${random.value}
+      config:
+        profile-separator: "/"
+        format: yaml
+        default-context: ${spring.application.name} #folder name. example: consul-prod
+        watch:
+          delay: 10
+          wait-time: 5
+
+      host: 127.0.0.1
+      port: 8500
+      enabled: true

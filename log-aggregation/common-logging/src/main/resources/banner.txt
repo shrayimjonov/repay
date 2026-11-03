@@ -1,0 +1,11 @@
+${AnsiColor.BRIGHT_CYAN}${AnsiStyle.BOLD}
+██████╗ ███████╗██████╗  █████╗ ██╗   ██╗
+██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝
+██████╔╝█████╗  ██████╔╝███████║ ╚████╔╝
+██╔══██╗██╔══╝  ██╔═══╝ ██╔══██║  ╚██╔╝
+██║  ██║███████╗██║     ██║  ██║   ██║
+╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝   ╚═╝
+${AnsiColor.BRIGHT_YELLOW}${AnsiStyle.BOLD}        Automated loan repayment processor
+${AnsiStyle.NORMAL}${AnsiColor.BRIGHT_BLACK}════════════════════════════════════════════
+${AnsiColor.BRIGHT_GREEN} :: ${application.title} ::${AnsiColor.BRIGHT_BLACK}  v${application.version}   ${AnsiColor.BRIGHT_BLACK}(Spring Boot ${spring-boot.version})
+${AnsiColor.DEFAULT}${AnsiStyle.NORMAL}

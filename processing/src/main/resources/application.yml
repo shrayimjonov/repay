@@ -1,0 +1,73 @@
+server:
+  port: 8735
+
+  max-http-request-header-size: 8KB
+  shutdown: immediate
+
+spring:
+  application:
+    name: processing
+
+  r2dbc:
+    url: ${SPRING_R2DBC_URL}
+    username: ${USERNAME}
+    password: ${SPRING_R2DBC_PASSWORD}
+  main:
+    web-application-type: reactive
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  webflux:
+    base-path: /processing
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI}
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+
+  data:
+    redis:
+      enabled: true
+      host: 127.0.0.1
+      port: 6379
+
+external:
+  humo:
+    url: ${EXTERNAL_HUMO_URL}
+    read-time-out: 1000
+    connect-time-out: 1000
+    token: ${EXTERNAL_HUMO_TOKEN}
+  sv-gate:
+    url: ${EXTERNAL_SV_GATE_URL}
+    read-time-out: 1000
+    connect-time-out: 1000
+    username: ${USERNAME}
+    password: '${EXTERNAL_SV_GATE_PASSWORD}'
+  visa-middleware:
+    url: ${EXTERNAL_VISA_MIDDLEWARE_URL}
+    read-time-out: 1000
+    connect-time-out: 1500
+  master-gate:
+    url: ${EXTERNAL_MASTER_GATE_URL}
+    read-time-out: 1_000
+    connect-time-out: 1_000
+    username: ${USERNAME}
+    password: ${EXTERNAL_MASTER_GATE_PASSWORD}
+
+eureka:
+  client:
+    enabled: false
+    service-url:
+      defaultZone: http://eureka:8761/eureka
+
+logging:
+  level:
+    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: warn
+    uz.nodir.processing.config.WebClientConfiguration: info
+    uz.nodir.processing.service.dao.impl.SwitcherRedisDAOImpl: debug

@@ -1,0 +1,70 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1716802759268-1
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: files_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: loan_ext_id
+                  type: VARCHAR(255)
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+              - column:
+                  name: description
+                  type: TEXT
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: date
+              - column:
+                  name: init_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: modified_by
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+
+            schemaName: public
+            tableName: files
+  - changeSet:
+      id: 1716802759268-2
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: loan_ext_id
+            indexName: file_loanid_ind
+            schemaName: public
+            tableName: files
+  - changeSet:
+      id: 1716802759268-3
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: public
+            sequenceName: file_save_seq
+            startValue: 1
+

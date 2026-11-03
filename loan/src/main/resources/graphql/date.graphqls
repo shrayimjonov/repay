@@ -1,0 +1,5 @@
+
+input DateRange {
+    startDate: String,
+    endDate: String
+}

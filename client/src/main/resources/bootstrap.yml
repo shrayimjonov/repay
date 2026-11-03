@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: client
+  profiles:
+    active: test
+server:
+  port: 8100
+  servlet:
+    context-path: /client

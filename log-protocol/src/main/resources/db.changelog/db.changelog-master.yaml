@@ -1,0 +1,5 @@
+databaseChangeLog:
+
+  - include:
+      file: /DDL/create_log_protocol.yml
+      relativeToChangelogFile: true

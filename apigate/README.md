@@ -1,0 +1,11 @@
+# apigate
+
+API gateway: routing, Keycloak JWT security and Resilience4j circuit breakers.
+
+Part of [repay](../README.md).
+
+```bash
+./mvnw spring-boot:run
+```
+
+Configuration comes from environment variables (`${ENV_VAR}` placeholders in `application.yml`).

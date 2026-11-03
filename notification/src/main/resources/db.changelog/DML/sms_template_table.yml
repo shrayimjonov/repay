@@ -1,0 +1,61 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1727353104633-1
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: sms_template_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: sms_type
+                  type: VARCHAR(255)
+              - column:
+                  name: text_values
+                  type: JSONB
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: date
+              - column:
+                  name: init_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: modified_by
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+            schemaName: public
+            tableName: sms_template
+  - changeSet:
+      id: 1727353104633-2
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - addUniqueConstraint:
+            columnNames: sms_type
+            constraintName: ukshcab6gbjm18xq86a5lkw8r9x
+            schemaName: public
+            tableName: sms_template
+
+  - changeSet:
+      id: 1727353104633-4
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: public
+            sequenceName: sms_temp_seq
+            startValue: 1

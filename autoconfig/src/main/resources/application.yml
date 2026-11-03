@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: repay-auto-configure
+  cache:
+    type: none
+  data:
+    mongodb:
+      enabled: true
+      host: 127.0.0.1
+      port: 27017
+      database: repay
+    redis:
+      enabled: true
+      host: 127.0.0.1
+      password: ${SPRING_DATA_REDIS_PASSWORD}
+      port: 6379
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS}
+    properties:
+      spring.json.trusted.packages: 'uz.repay.common.*'
+
+broker:
+  type: default
+
+schema-registry:
+  url: ${SCHEMA_REGISTRY_URL}
+
+scheduler:
+  enabled: true

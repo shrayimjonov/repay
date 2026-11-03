@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  file:
+    image: file
+    container_name: file-service  
+    build: .
+    ports:
+      - "8705:8705"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx512m -Xms256m
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-Duser.timezone=Asia/Tashkent", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

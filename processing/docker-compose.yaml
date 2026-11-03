@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  repay:
+    image: processing
+    build: .
+#    deploy:
+#      mode: replicated
+#      replicas: 5
+    container_name: processing
+    ports:
+      - "8735:8735"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx512m -Xms256m
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

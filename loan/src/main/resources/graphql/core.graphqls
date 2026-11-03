@@ -1,0 +1,6 @@
+
+type CoreError {
+    code: Int,
+    message: String
+}
+

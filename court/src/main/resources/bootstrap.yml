@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: court
+  profiles:
+    active: test
+server:
+  port: 8725
+  servlet:
+    context-path: /court

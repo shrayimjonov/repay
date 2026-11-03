@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  autodebit:
+    image: autodebit
+    build: .
+#    container_name: autodebit
+    deploy:
+      mode: replicated
+      replicas: 1
+    ports:
+      - "8715-8724:8715"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx8192m -Xms4096m
+      - SPRING_PROFILES_ACTIVE=test
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-Dspring.profiles.active=test", "-Duser.timezone=Asia/Tashkent", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

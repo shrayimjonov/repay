@@ -1,0 +1,73 @@
+databaseChangeLog:
+- changeSet:
+    id: 1706594287030-1
+    author: ${CHANGESET_AUTHOR}
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: epos_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: created_by
+            type: VARCHAR(255)
+        - column:
+            name: created_date
+            type: date
+        - column:
+            name: init_time
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: modified_by
+            type: VARCHAR(255)
+        - column:
+            name: update_time
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: account
+            type: VARCHAR(255)
+        - column:
+            name: branch
+            type: VARCHAR(255)
+        - column:
+            name: merchant_id
+            type: VARCHAR(255)
+        - column:
+            name: processing
+            type: VARCHAR(255)
+        - column:
+            name: service
+            type: VARCHAR(255)
+        - column:
+            name: terminal_id
+            type: VARCHAR(255)
+        schemaName: public
+        tableName: epos
+- changeSet:
+    id: 1706594287030-2
+    author: ${CHANGESET_AUTHOR}
+    changes:
+    - addUniqueConstraint:
+        columnNames: branch, processing, service
+        constraintName: onlyoneepostoonebranch
+        schemaName: public
+        tableName: epos
+- changeSet:
+    id: 1706594287030-3
+    author: ${CHANGESET_AUTHOR}
+    changes:
+    - createSequence:
+        cacheSize: 1
+        cycle: false
+        dataType: bigint
+        incrementBy: 1
+        maxValue: 9223372036854775807
+        minValue: 1
+        schemaName: public
+        sequenceName: epos_seq
+        startValue: 1
+

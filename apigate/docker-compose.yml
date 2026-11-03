@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  apigate:
+    image: apigate
+    container_name: apigate
+    build: .
+    ports:
+      - "8888:8888"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx512m -Xms256m
+    command: [ "java", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

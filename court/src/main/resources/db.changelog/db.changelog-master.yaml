@@ -1,0 +1,21 @@
+databaseChangeLog:
+
+  - include:
+      file: /DDL/court-table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DDL/qrtz_tables.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DDL/chambers_application.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DDL/add_appId_column_to_chambers_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DDL/add_note_column_to_chambers_table.sql
+      relativeToChangelogFile: true

@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "NewLoanEvent",
+  "namespace": "uz.repay.common.generated.model.event",
+  "fields": [
+    { "name": "subject", "type": ["null", "string"], "default": null },
+    { "name": "patronymic", "type": ["null", "string"], "default": null },
+    { "name": "first_name", "type": ["null", "string"], "default": null },
+    { "name": "birth_place", "type": ["null", "string"], "default": null },
+    { "name": "id_nibbd", "type": ["null", "string"], "default": null },
+    { "name": "surname", "type": ["null", "string"], "default": null },
+    { "name": "id", "type": "int" },
+    { "name": "external_id", "type": ["null", "string"], "default": null },
+    { "name": "birthday", "type": ["null", "int"], "default": null },
+    { "name": "payer_phone", "type": ["null", "string"], "default": null },
+    { "name": "branch", "type": ["null", "string"], "default": null },
+    { "name": "created_time", "type": ["null", "long"], "default": null },
+    { "name": "code_gender", "type": ["null", "string"], "default": null },
+    { "name": "passport_date_expiration", "type": ["null", "int"], "default": null },
+    { "name": "resident", "type": ["null", "boolean"], "default": null },
+    { "name": "passport_date_registration", "type": ["null", "int"], "default": null },
+    { "name": "passport_serial", "type": ["null", "string"], "default": null },
+    { "name": "passport_number", "type": ["null", "string"], "default": null },
+    { "name": "currency", "type": ["null", "string"], "default": null },
+    { "name": "pinfl", "type": ["null", "string"], "default": null }
+  ]
+}

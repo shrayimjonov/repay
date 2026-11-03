@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "name": "CardConfirmationEvent",
+  "namespace": "uz.repay.common.generated.model.event",
+  "fields": [
+    {
+      "name": "code",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "pan",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "loan_ext_id",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "phone",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "language",
+      "type": ["null", "string"],
+      "logicalType": "languageEnum",
+      "default": null
+    }
+  ]
+}

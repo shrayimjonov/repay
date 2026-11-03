@@ -1,0 +1,113 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1706161667825-1
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: loan_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: date
+              - column:
+                  name: init_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: modified_by
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: birth_place
+                  type: VARCHAR(255)
+              - column:
+                  name: birthday
+                  type: VARCHAR(255)
+              - column:
+                  name: branch
+                  type: VARCHAR(255)
+              - column:
+                  name: code_gender
+                  type: VARCHAR(255)
+              - column:
+                  name: external_id
+                  type: VARCHAR(255)
+              - column:
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  name: id_nibbd
+                  type: VARCHAR(255)
+              - column:
+                  name: is_convicted
+                  type: BOOLEAN
+              - column:
+                  name: is_deleted
+                  type: BOOLEAN
+              - column:
+                  name: passport_date_expiration
+                  type: VARCHAR(255)
+              - column:
+                  name: passport_date_registration
+                  type: VARCHAR(255)
+              - column:
+                  name: passport_number
+                  type: VARCHAR(255)
+              - column:
+                  name: passport_serial
+                  type: VARCHAR(255)
+              - column:
+                  name: patronymic
+                  type: VARCHAR(255)
+              - column:
+                  name: payer_name
+                  type: VARCHAR(255)
+              - column:
+                  name: pinfl
+                  type: VARCHAR(255)
+              - column:
+                  name: surname
+                  type: VARCHAR(255)
+              - column:
+                  name: tin
+                  type: VARCHAR(255)
+              - column:
+                  name: payer_phone
+                  type: VARCHAR(255)
+            schemaName: public
+            tableName: loan
+
+  - changeSet:
+      id: 1706161667825-6
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: public
+            sequenceName: loan_seq
+            startValue: 1
+
+  - changeSet:
+      id: 1706161667825-3
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - addUniqueConstraint:
+            columnNames: external_id
+            constraintName: external_id
+            schemaName: public
+            tableName: loan

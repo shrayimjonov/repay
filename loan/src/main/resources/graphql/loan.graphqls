@@ -1,0 +1,55 @@
+
+
+type Query {
+    filter(requestDTO: LoanSimpleRequestDTO): LoanSimpleResponseDTO
+}
+
+
+input LoanSimpleRequestDTO {
+    pageNumber: Int,
+    pageSize : Int,
+    sortBy: String,
+    descending: Boolean,
+    params: LoanSearchParams
+}
+
+input LoanSearchParams {
+    personCode: String,
+    extId: String,
+    name: String,
+    phone: String,
+    clientId: String,
+    isConvicted: Boolean,
+    branches: [Branch],
+    rangeParams: DateRange,
+    isFeatured: Boolean,
+    isOwnLoans: Boolean,
+    is_insolvent: Boolean
+}
+
+type LoanSimpleResponseDTO {
+    successCode: Int,
+    isSuccess: Boolean,
+    status: String,
+    result: LoanSimpleResponse,
+    error: CoreError
+}
+
+
+
+type LoanSimpleResult {
+    id: ID,
+    extId: String,
+    payerName: String,
+    initTime: String,
+    isFeatured: Boolean
+}
+
+type LoanSimpleResponse {
+    size: Int,
+    currentPage: Int,
+    numberOfElements: Int,
+    totalPages: Int,
+    totalElements: Int,
+    loans: [LoanSimpleResult]
+}

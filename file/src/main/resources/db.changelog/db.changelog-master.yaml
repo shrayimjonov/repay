@@ -1,0 +1,13 @@
+databaseChangeLog:
+
+  - include:
+      file: /file_saver_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DDL/create_location_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/add_isInternal_column_2_files_table.sql
+      relativeToChangelogFile: true

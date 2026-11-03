@@ -1,0 +1,2 @@
+ALTER TABLE public.card DROP CONSTRAINT card_ind;
+COMMIT;

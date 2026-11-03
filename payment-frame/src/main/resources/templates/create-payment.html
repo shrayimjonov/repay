@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата | DAVR BANK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<div id="toastContainer" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+<div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+    <!-- Логотип -->
+    <div class="flex justify-center mb-6">
+        <img th:src="@{/images/davr-bank-logo.png}" alt="DAVR BANK" class="h-12" />
+    </div>
+
+    <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">Оплата за кредит</h1>
+
+    <!-- Сумма -->
+    <div>
+        <label class="block text-gray-700 mb-1">Сумма</label>
+        <input type="text" id="amountDisplay" required placeholder="0,00"
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200" />
+        <input type="hidden" name="amount" id="amount" />
+    </div>
+
+    <!-- Анкета -->
+    <div>
+        <label class="block text-gray-700 mb-1">Анкета</label>
+        <input type="text" name="loan_ext_id" placeholder="01121158076" required
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200" />
+    </div>
+
+    <!-- Номер карты -->
+    <div>
+        <label class="block text-gray-700 mb-1">Номер карты</label>
+        <input type="text" name="pan" pattern="\d{16}" minlength="16" maxlength="16" required placeholder="860051******4900"
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200" />
+    </div>
+
+    <!-- Срок действия -->
+    <div>
+        <label class="block text-gray-700 mb-1">Срок действия (мм/ГГ)</label>
+        <input type="text" id="expiryDisplay" maxlength="5" required placeholder="01/25"
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200" />
+        <input type="hidden" name="expiry" id="expiry" />
+    </div>
+
+    <!-- Кнопка -->
+    <button type="button" id="submitBtn"
+            onclick="submitForm()"
+            class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition flex items-center justify-center mt-4">
+        <span id="submitText">Создать оплату</span>
+        <svg id="spinner" class="hidden ml-2 w-5 h-5 animate-spin text-white"
+             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10"
+                    stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+        </svg>
+    </button>
+</div>
+</body>
+
+<!-- 💸 Форматирование суммы -->
+<script>
+    const displayInput = document.getElementById('amountDisplay');
+    const hiddenInput = document.getElementById('amount');
+
+
+    displayInput.addEventListener('input', () => {
+        let digits = displayInput.value.replace(/\D/g, '');
+        if (digits === '') digits = '0';
+        digits = digits.replace(/^0+/, '') || '0';
+        const padded = digits.padStart(3, '0');
+        const intPart = padded.slice(0, -2);
+        const decimalPart = padded.slice(-2);
+        const intFormatted = parseInt(intPart, 10).toLocaleString('ru-RU');
+        displayInput.value = `${intFormatted},${decimalPart}`;
+        hiddenInput.value = parseInt(digits, 10);
+    });
+
+    displayInput.addEventListener('focus', (e) => {
+        const val = e.target.value;
+        e.target.value = '';
+        setTimeout(() => e.target.value = val, 0);
+    });
+</script>
+
+<!-- 🕓 Форматирование срока действия -->
+<script>
+    const expiryInput = document.getElementById('expiryDisplay');
+    const hiddenExpiry = document.getElementById('expiry');
+
+    expiryInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 4) value = value.slice(0, 4);
+        if (value.length >= 3) {
+            e.target.value = `${value.slice(0, 2)}/${value.slice(2)}`;
+        } else {
+            e.target.value = value;
+        }
+        hiddenExpiry.value = value;
+    });
+
+    expiryInput.addEventListener('focus', () => {
+        setTimeout(() => {
+            expiryInput.setSelectionRange(expiryInput.value.length, expiryInput.value.length);
+        }, 0);
+    });
+</script>
+
+<!-- 🚀 Отправка формы с валидацией -->
+<script>
+    function submitForm() {
+        const amount = parseInt(document.getElementById('amount').value);
+
+        if (isNaN(amount)) {
+            showToastError("Сумма не указана или некорректна.");
+            return;
+        }
+        const loanExtId = document.querySelector('input[name="loan_ext_id"]').value;
+        const pan = document.querySelector('input[name="pan"]').value;
+        const expiry = document.getElementById('expiry').value;
+
+        // Валидация срока действия
+        if (expiry.length !== 4 || !/^\d{4}$/.test(expiry)) {
+            showToastError("Неверный формат срока действия.");
+            return;
+        }
+        const month = parseInt(expiry.slice(0, 2));
+        if (month < 1 || month > 12) {
+            showToastError("Месяц срока действия должен быть от 01 до 12.");
+            return;
+        }
+
+        const year = parseInt(expiry.slice(2, 4));
+
+        if (year < 25) {
+            showToastError("Год срока действия должен минимум 25");
+            return;
+        }
+
+        const data = {
+            amount,
+            loan_ext_id: loanExtId,
+            pan,
+            expiry
+        };
+
+        // Лоадер + блокировка
+        const btn = document.getElementById('submitBtn');
+        const spinner = document.getElementById('spinner');
+        const text = document.getElementById('submitText');
+        btn.disabled = true;
+        spinner.classList.remove('hidden');
+        text.textContent = "Отправка...";
+
+        fetch('/pay-frame/api/v1/internal/new', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(json => {
+                spinner.classList.add('hidden');
+                text.textContent = "Создать оплату";
+                btn.disabled = false;
+
+                if (json.isSuccess && json.result?.iframeUrl) {
+                    window.location.href = json.result.iframeUrl;
+                } else {
+                    const errorMessage = json.error?.message || "Неизвестная ошибка";
+                    showToastError(errorMessage);
+                }
+            })
+            .catch(() => {
+                spinner.classList.add('hidden');
+                text.textContent = "Создать оплату";
+                btn.disabled = false;
+                showToastError("Ошибка соединения.");
+            });
+    }
+</script>
+
+<script>
+
+    function showToastSuccess(message) {
+       showToast(message, 'success')
+    }
+
+    function showToastError(message) {
+        showToast(message, 'failed')
+    }
+
+    function showToast(message, type = 'success') {
+        const toastContainer = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+
+        toast.className = `max-w-sm w-full px-4 py-3 rounded shadow-lg text-white ${
+            type === 'success' ? 'bg-green-500' : 'bg-red-500'
+        }`;
+
+        toast.innerText = message;
+
+        toastContainer.appendChild(toast);
+
+        // Удалить через 3 секунды
+        setTimeout(() => {
+            toast.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+            setTimeout(() => toast.remove(), 500);
+        }, 3000);
+    }
+
+
+</script>
+
+</html>

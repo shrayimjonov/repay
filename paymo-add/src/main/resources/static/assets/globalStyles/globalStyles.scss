@@ -1,0 +1,264 @@
+:host ::ng-deep {
+
+    .pending{
+        font-size: 12px !important;
+    }
+
+    .search-block input{
+        width: 250px;
+    }
+
+    .p-paginator {
+        .p-paginator-current {
+            margin-left: auto;
+        }
+    }
+
+    .p-progressbar {
+        height: .5rem;
+        background-color: #D8DADC;
+
+        .p-progressbar-value {
+            background-color: #607D8B;
+        }
+    }
+
+    .table-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .p-calendar .p-datepicker {
+        min-width: 25rem;
+
+        td {
+            font-weight: 400;
+        }
+    }
+
+    .p-datatable.p-datatable-customers {
+        .p-datatable-header {
+            padding: 1rem;
+            text-align: left;
+            font-size: 1.5rem;
+        }
+
+        .p-paginator {
+            padding: 1rem;
+        }
+
+        .p-datatable-thead > tr > th {
+            text-align: center;
+        }
+        .p-datatable-tbody > tr > td{
+            text-align: center;
+            padding: 10px!important;
+        }
+
+        .p-dropdown-label:not(.p-placeholder) {
+            text-transform: uppercase;
+        }
+    }
+
+    .p-datatable.p-datatable-customers:not(.p-datatable-gridlines) {
+        .p-datatable-tbody > tr > td {
+            cursor: auto;
+        }
+    }
+
+
+
+    /* Responsive */
+    .p-datatable-customers .p-datatable-tbody > tr > td .p-column-title {
+        display: none;
+    }
+
+    //p-table tr{
+    //    background-color: green;
+    //}
+    .border-green {
+        border: 2px solid green;
+    }
+
+    .border-red {
+        border: 2px solid red;
+    }
+
+}
+
+
+p-table {
+    tr {
+        &:hover {
+            background-color: #4cb64c;
+            color: white;
+        }
+
+        th {
+            background-color: #4cb64c;
+            color: white;
+        }
+    }
+
+    .red {
+        color: red;
+
+    }
+
+    .green {
+        color: #4cb64c;
+
+        &:hover {
+            color: #4cb64c !important;
+            background-color: #aaa;
+        }
+    }
+
+    .warning {
+        color: #427ae8;
+
+        &:hover {
+            color: #427ae8 !important;
+            background-color: #aaa;
+        }
+    }
+
+    tr.black {
+        background-color: #9a9494 !important;
+    }
+
+    .stop {
+        background-color: #bec4c7 !important;
+    }
+
+    tbody tr:nth-child(2n) {
+        background-color: #4cb64c;
+    }
+}
+
+.customer-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.status-qualified {
+        background: #C8E6C9;
+        color: #256029;
+    }
+
+    &.status-unqualified {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.status-negotiation {
+        background: #FEEDAF;
+        color: #8A5340;
+    }
+
+    &.status-new {
+        background: #B3E5FC;
+        color: #23547B;
+    }
+
+    &.status-renewal {
+        background: #ECCFFF;
+        color: #694382;
+    }
+
+    &.status-proposal {
+        background: #FFD8B2;
+        color: #805B36;
+    }
+}
+
+.product-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.status-instock {
+        background: #C8E6C9;
+        color: #256029;
+    }
+
+    &.status-outofstock {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.status-lowstock {
+        background: #FEEDAF;
+        color: #8A5340;
+    }
+}
+
+.error,
+.p-invalid{
+    color: red;
+}
+
+.success{
+    color: #05be05 !important;
+}
+
+.warning{
+    color: #fd892a !important;
+}
+
+.actions{
+    padding: 5px 8px;
+    border-radius: 5px;
+    width: 150px !important;
+    text-align: center;
+}
+
+.action-red{
+    border: 1px solid red !important;
+    color: red !important;
+}
+
+.action-orange{
+    border: 1px solid orange !important;
+    color: orange !important;
+}
+
+.action-default{
+    border: 1px solid blue !important;
+    color: blue !important;
+}
+
+.order-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.order-delivered {
+        background: #C8E6C9;
+        color: #256029;
+    }
+
+    &.order-cancelled {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.order-pending {
+        background: #FEEDAF;
+        color: #8A5340;
+    }
+
+    &.order-returned {
+        background: #ECCFFF;
+        color: #694382;
+    }
+}

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: logging-rest
+  profiles:
+    active: test
+server:
+  port: 8600
+  servlet:
+    context-path: /loggingrest

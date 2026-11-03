@@ -1,0 +1,87 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1705052801895-3
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: status_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: date
+              - column:
+                  name: init_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: modified_by
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  constraints:
+                    nullable: false
+                  name: code
+                  type: VARCHAR(255)
+              - column:
+                  name: definition
+                  type: VARCHAR(255)
+              - column:
+                  name: definition_uz
+                  type: VARCHAR(255)
+              - column:
+                  name: processing
+                  type: VARCHAR(255)
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+            schemaName: public
+            tableName: status
+
+  - changeSet:
+      id: 1705052801895-7
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: code
+              - column:
+                  name: processing
+            indexName: stat_proces_code_ind
+            schemaName: public
+            tableName: status
+
+  - changeSet:
+      id: 1705052801895-8
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: type
+              - column:
+                  name: processing
+            indexName: stat_proces_type_ind
+            schemaName: public
+            tableName: status
+
+
+  - changeSet:
+      id: 1705052801895-9
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - addUniqueConstraint:
+            columnNames: code, processing, type
+            constraintName: stat_onecode_oneproc
+            schemaName: public
+            tableName: status

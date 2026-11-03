@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  report-service:
+    image: report-service
+    build: .
+    container_name: report
+#    deploy:
+#      mode: replicated
+#      replicas: 3
+    ports:
+    #  - "8818-8820:8818"
+      - "8818:8818"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx1024m -Xms256m
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-Duser.timezone=Asia/Tashkent", "-jar", "/app/app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

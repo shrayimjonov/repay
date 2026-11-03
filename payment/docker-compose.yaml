@@ -1,0 +1,21 @@
+services:
+  payment:
+    image: payment-image
+    build: .
+  #  container_name: payment
+    deploy:
+      mode: replicated
+      replicas: 5
+    ports:
+      - "8710-8714:8710"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx1024m -Xms256m
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

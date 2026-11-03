@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  repay:
+    image: card-service
+    build: .
+    deploy:
+      mode: replicated
+      replicas: 5
+    ports:
+      - "8725-8734:8701"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx512m -Xms256m
+      - JASYPT_PASSWORD=${JASYPT_PASSWORD}
+#    command: java -Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD} -jar app.jar
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

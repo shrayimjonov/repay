@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  repay:
+    image: logging-rest
+    build: .
+    deploy:
+      mode: replicated
+      replicas: 1
+    ports:
+      - "8600:8600"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx512m -Xms256m
+      - JASYPT_PASSWORD=${JASYPT_PASSWORD}
+    command: [ "java", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

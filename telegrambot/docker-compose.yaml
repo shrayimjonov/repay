@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: Repay-Bot
+    command: sh -c "python /app/src/run.py"
+    ports:
+      - "9000:9000"
+    restart: always
+    environment:
+      - DEBUG=True
+      - TZ=Asia/Tashkent
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

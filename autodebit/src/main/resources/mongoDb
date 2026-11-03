@@ -1,0 +1,21 @@
+use repay
+
+db.createRole(
+   {
+     role: "repayAdmin",
+     privileges: [
+       { resource: { db: "repay", collection: "repay" }, actions: [ "find", "update", "insert", "remove" ] }
+     ],
+     roles: [
+       { role: "read", db: "repay" }
+     ]
+   },
+   { w: "majority" , wtimeout: 5000 }
+)
+
+db.createUser(
+{ user: "mongopay", pwd: "${MONGO_PASSWORD}", roles: [ { role: "repayAdmin", db: "repay" } ]
+} )
+
+// find data less then date
+{createdTime: {$lte:ISODate("2024-07-07")}}

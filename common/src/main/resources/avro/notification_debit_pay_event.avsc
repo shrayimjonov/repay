@@ -1,0 +1,44 @@
+{
+  "type": "record",
+  "name": "NotificationDebitPayEvent",
+  "namespace": "uz.repay.common.generated.model.event",
+  "fields": [
+    {
+      "name": "full_name",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "amount",
+      "type": ["null", "long"],
+      "default": null
+    },
+    {
+      "name": "payer",
+      "type": ["null", "string"],
+      "logicalType": "payerEnum",
+      "default": null
+    },
+    {
+      "name": "pan",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "loan_ext_id",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "phone",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "language",
+      "type": ["null", "string"],
+      "logicalType": "languageEnum",
+      "default": null
+    }
+  ]
+}

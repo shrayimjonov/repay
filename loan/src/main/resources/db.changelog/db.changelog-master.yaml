@@ -1,0 +1,84 @@
+databaseChangeLog:
+
+  - include:
+      file: /loan_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /debtLoan_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: db.changelog/DML/loanIsDeletedIndex.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/residentAndSubjectToLoan.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/add_is_auto_debit_column_2_loan_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/create_featured_loans_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/add_id_to_featured_loan_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/alter_featured_loan_table_PK.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/add_note_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/added_log_protocol_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/add_Ip_address_column_to_log_protocol_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/add_loan_index_to_log_protocol_table.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: db.changelog/DML/alter_table_loan_add_lang_column.sql
+      relativeToChangelogFile: false
+
+  - include:
+      file: /DML/alter_loan_table_add_insolvent_column.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/alter_debt_loan_table_add_insolvent_column.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/alter_debt_loan_table_add_loan_id_column.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/add_guarantor_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/alter_guarantor_table_birthday_column.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DDL/add_currency_column_2_loan_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /DML/alter_loan_table_add_product_name_column.sql
+      relativeToChangelogFile: true
+
+
+

@@ -1,0 +1,100 @@
+codeNum,codeMessage
+902,Soobshenie o prichine otkloneniya: nedeystvitel'naya tranzaksiya
+903,Soobshenie o sostoyanii: povtorno vvedite tranzaksiyu
+904,Soobshenie o prichine otkloneniya: oshibka formata
+905,Soobshenie o prichine otkloneniya: acqiurer ne podderjivaetsya kommutatorom
+906,Soobshenie o prichine otkloneniya: perexod v prosesse
+907,Soobshenie o prichine otkloneniya: emitent karti ili kommutator ne rabotayut
+908,Soobshenie o prichine otkloneniya: nevozmojno nayti mesto naznacheniya tranzaksii dlya marshrutizasii
+909,Soobshenie o prichine otkloneniya: neispravnost' sistemi
+910,Soobshenie o prichine otkloneniya: emitent karti podpisan
+911,Soobshenie o prichine otkloneniya: taym-aut emitenta karti
+912,Soobshenie o prichine otkloneniya: emitent karti nedostupen
+913,Soobshenie o prichine otkloneniya: povtornaya peredacha
+914,Soobshenie o prichine otkloneniya: nevozmojno otsledit' isxodnuyu tranzaksiyu
+915,Soobshenie o prichine otkloneniya: oshibka pereklyucheniya ili kontrol'noy tochki
+916,Soobshenie o prichine otkloneniya: MAC neverniy
+917,Soobshenie o prichine otkloneniya: oshibka sinxronizasii MAC-klyucha
+918,Soobshenie o prichine otkloneniya: net dostupnix klyuchey svyazi
+919,Soobshenie o prichine otkloneniya: oshibka sinxronizasii klyucha shifrovaniya
+920,Soobshenie ob oshibke otkloneniya: oshibka programmnogo obespecheniya
+6,Utverjdeno dlya chastichnoy summi tip scheta ukazanniy emitentom karti
+7,Utverjdeno obnovit' ICC
+100,Otklonenie (obshee bez kommentariev)
+101,Otklonit' prosrochennaya karta
+102,Snijenie podozrenie na moshennichestvo
+103,Otklonit' poluchatel' karti svyazivaetsya s eskvayrom
+104,Otklonit' karta s ogranichennim dostupom
+105,Otklonit' otdel po priemu zvonkov prinimayushiy otdel bezopasnosti
+106,Otkloneno dopustimie popitki PIN previsheni
+107,Otklonit' obratites' k emitentu karti
+108,Otklonit' sm. Osobie usloviya emitenta karti
+109,Otklonit' nedeystvitel'niy prodaves
+110,otklonenie nedeystvitel'naya summa
+111,Otklonenie neverniy nomer karti
+112,Otklonit' trebuetsya PIN-kod
+113,Otklonit' nedopustimaya plata
+114,Otkloneno akkaunt tipa ne zaproshen
+115,Otklonenie zaproshennaya funksiya ne podderjivaetsya
+116,Otklonenie nedostatochno sredstv
+117,Otklonenie neverniy PIN-kod
+118,Snijenie net zapisi karti
+119,Otklonit' tranzaksiya ne razreshena vladel'su karti
+120,Otklonit' tranzaksiya ne razreshena k terminalu
+121,otkloneno previshaet limit summi snyatiya
+122,Otklonenie narushenie bezopasnosti
+123,Otklonenie previshaet limit chastoti snyatiya yesli dostupen kontaktniy interfeys s PIN-kodom
+124,Snijenie narushenie zakona
+125,otkloneno karta ne deystvuet
+126,Otklonit' nedeystvitel'niy blok PIN
+127,Otklonenie oshibka dlini PIN
+128,Otklonenie oshibka sinxronizasii PIN-koda
+129,Otklonenie podozrenie na poddel'nuyu kartu
+180,Otklonenie po jelaniyu derjatelya karti
+200,pikap (voobshe bez kommentariev)
+201,Pikap prosrochennaya karta
+202,Pikap podozrenie na moshennichestvo
+203,Pikap poluchatel' karti poluchatel' karti kontakta
+204,Pikap karta s ogranichennim dostupom
+205,Pick-up otdel po priemu zvonkov prinimayushiy kartu
+206,Pikap dopustimie popitki PIN previsheni
+207,Pikap osobie usloviya
+208,Pikap poteryannaya karta
+209,Pikap ukradennaya kartochka
+210,Pikap podozrevaetsya poddel'naya karta
+300,Status soobsheniya: fayl uspeshno zavershen
+301,Soobshenie o sostoyanii: deystvie fayla ne podderjivaetsya poluchatelem
+302,Soobshenie o sostoyanii: nevozmojno nayti zapis' v fayle
+303,Soobshenie o sostoyanii: povtoryayushayasya zapis' staraya zapis' zamenena
+304,Soobshenie o sostoyanii: oshibka redaktirovaniya polya zapisi fayla
+305,Soobshenie o sostoyanii: fayl zablokirovan
+306,Soobshenie o sostoyanii: deystvie fayla ne vipolneno
+307,Soobshenie o sostoyanii: oshibka formata dannix fayla
+308,Soobshenie o sostoyanii: povtoryayushayasya zapis' novaya zapis' otklonena
+309,Status soobsheniya: neizvestniy fayl
+400,Prinyato (dlya obrasheniya)
+499,Odobreno dannie original'nogo soobsheniya otsutstvuyut
+500,Status soobsheniya: soglasovano v balanse
+501,Soobshenie o sostoyanii: soglasovano ne sbalansirovanno 
+502,Statusnoe soobshenie: summa ne sverena itogi predostavleni
+503,Statusnoe soobshenie: itogi dlya sverki nedostupni
+504,Soobshenie o sostoyanii: ne soglasovano itogi predostavleni
+600,Prinyato (dlya administrativnoy informasii)
+601,Soobshenie o sostoyanii: nevozmojno otsledit' isxodnuyu tranzaksiyu
+602,Soobshenie o statuse: neverniy nomer ssilki na tranzaksiyu
+603,Soobshenie o sostoyanii: nomer ssilki / PAN nesovmestimi
+604,Status soobsheniya: POS fotografiya nedostupna
+605,Statusnoe soobshenie: zaproshenniy tovar predostavlen
+606,Soobshenie o sostoyanii: zapros ne mojet bit' vipolnen - ??neobxodimaya dokumentasiya nedostupna
+680,Spisok gotov
+681,Spisok ne gotov
+700,Prinyato (dlya sbora plati)
+800,Prinyato (dlya upravleniya set'yu)
+900,Soveti priznani finansovoe obyazatel'stvo ne prinyato
+901,Soveti priznani finansovaya otvetstvennost' prinyata
+0,Utverjdeno
+1,Utverjdeno chest' s identifikasiey
+2,Utverjdeno dlya chastichnoy summi
+3,Odobreno dlya VIP
+4,Utverjdeno obnovlenie treka 3
+5,Utverjdeno tip scheta ukazan emitentom karti

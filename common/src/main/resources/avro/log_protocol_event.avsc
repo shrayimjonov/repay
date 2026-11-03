@@ -1,0 +1,41 @@
+/**
+Save logs with this class.
+For Example: from 0098127386 removed 5614****8988 card
+
+**/
+{
+  "type": "record",
+  "name": "LogProtocolEvent",
+  "namespace": "uz.repay.common.generated.model.event",
+  "fields": [
+    {
+      "name": "loan_ext_id",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "type",
+      "type": ["null", "string"],
+      "logicalType": "protocolTypeEnum",
+      "default": null
+    },
+    {
+      "name": "request",
+      "type": ["null", {
+        "type": "map",
+        "values": "string"
+      }],
+      "default": null
+    },
+    {
+      "name": "ip_address",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "username",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

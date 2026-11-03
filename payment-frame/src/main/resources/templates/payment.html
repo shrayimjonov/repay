@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Платеж | DAVR BANK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center px-4">
+<div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full relative">
+    <!-- Таймер -->
+    <div id="timer" class="absolute top-4 right-4 text-sm text-gray-500 font-medium"></div>
+
+    <!-- Заголовок -->
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Платёж по кредиту</h2>
+
+    <!-- Инфо -->
+    <div class="mb-4">
+        <span id="amountFormatted" th:attr="data-amount=${paymentSession.result.amount}"
+              th:text="${paymentSession.result.amount} + ' UZS'"></span>
+        <p class="text-gray-700"><strong>Анкета:</strong> <span th:text="${paymentSession.result.loanExtId}"></span></p>
+        <p class="text-gray-700"><strong>Карта:</strong> <span th:text="${paymentSession.result.pan}"></span></p>
+        <p class="text-gray-700"><strong>Время создание:</strong> <span
+                th:text="${paymentSession.result.createTime}"></span></p>
+
+        <p th:if="${paymentSession.result.paidTime !=null}" class="text-gray-700"><strong>Время платежа:</strong> <span
+                th:text="${paymentSession.result.paidTime}"></span></p>
+
+    </div>
+
+
+    <div th:if="${paymentSession.result.paid}"
+         class="bg-green-100 text-green-800 text-center py-3 rounded mb-4 font-semibold">
+        ✅ Платёж успешно завершён
+    </div>
+
+    <!-- OTP форма -->
+    <div th:if="${!paymentSession.result.paid}">
+        <form th:action="@{/pay-frame/api/v1/internal/widget/payment/{token}/pay(token=${paymentSession.result.id})}"
+              method="post" class="space-y-4">
+            <div>
+                <label for="otp" class="block text-gray-700 font-medium mb-1">Введите OTP-код</label>
+                <input type="text" name="otp" id="otp" required placeholder="******"
+                       class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"/>
+            </div>
+            <button type="submit"
+                    class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+                Оплатить
+            </button>
+        </form>
+    </div>
+
+    <!-- Назад -->
+    <div class="mt-6 text-center">
+        <a href="/pay-frame/api/v1/internal/new" class="text-blue-600 hover:underline">← Назад к форме оплаты</a>
+    </div>
+</div>
+
+<!-- ⏳ Таймер JS -->
+<script>
+    let totalSeconds = 5 * 60; // 5 минут
+
+    const timerEl = document.getElementById('timer');
+    const updateTimer = () => {
+        const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+        const seconds = String(totalSeconds % 60).padStart(2, '0');
+        timerEl.textContent = `Осталось времени: ${minutes}:${seconds}`;
+
+        if (totalSeconds > 0) {
+            totalSeconds--;
+        } else {
+            timerEl.textContent = "⏰ Сессия истекла";
+            const btn = document.querySelector("button[type='submit']");
+            if (btn) {
+                btn.disabled = true;
+                btn.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        }
+    };
+
+    setInterval(updateTimer, 1000);
+</script>
+</body>
+
+<script>
+    console.log("amount: ", document.getElementById('amountFormatted').value)
+    const amountEl = document.getElementById('amountFormatted');
+    const amountInCents = parseInt(amountEl.dataset.amount || '0');
+    const rub = Math.floor(amountInCents / 100);
+    const kop = String(amountInCents % 100).padStart(2, '0');
+    const formatted = rub.toLocaleString('ru-RU') + ',' + kop;
+    amountEl.textContent = formatted;
+</script>
+</html>

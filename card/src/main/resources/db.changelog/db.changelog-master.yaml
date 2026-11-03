@@ -1,0 +1,140 @@
+databaseChangeLog:
+
+  - include:
+      file: /card_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /loan_cards_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /status_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/status.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/switchersToStatus.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /terminal_table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/removeCardPanUniqueConstraint.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/addColumnIsDeleted2LoanCard.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/newStatuses2.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/reconciliation_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/reconciliation_add_columns.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/add_deleted_cards_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/add_ip_column_2_card.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/add_ip_column_2_loan_card.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/add_currency_2_card_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/add_added_type_column_2_loan_card_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/create_loan_temp_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/add_temp_loans.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/add_autopay_tables.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/create_table_guarantor_cards.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /sql/add_isConfirmed_column_2_loan_card_table.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: /add_exceptional_to_epos.yml
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_2.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_3.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_4.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_5.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_8.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_9.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_10.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_11.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_12.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/eposChangeConstraint.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_payment_types_epos.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_payment_types_epos_second_part.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_13.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_14.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_15.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_16.sql
+      relativeToChangelogFile: true
+  - include:
+      file: /sql/add_temp_loans_17.sql
+      relativeToChangelogFile: true

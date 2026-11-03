@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  loan:
+    image: loan
+    build: .
+    deploy:
+      mode: replicated
+      replicas: 10
+    #   container_name: loan
+    ports:
+      - "8740-8749:8706"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx512m -Xms256m
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-Duser.timezone=Asia/Tashkent", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

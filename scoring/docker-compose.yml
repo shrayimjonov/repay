@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    image: scoring-image
+    build: .
+    container_name: scoring-service
+    ports:
+      - "8720:8720"
+    restart: always
+    environment:
+      - TZ=Asia/Tashkent
+      - JVM_OPTS=-Xmx512m -Xms256m
+    command: [ "java", "-Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}", "-jar", "app.jar" ]
+    networks:
+      - paymo
+networks:
+  paymo:
+    name: paymo
+    external: true

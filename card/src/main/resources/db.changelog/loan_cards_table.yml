@@ -1,0 +1,104 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1705052801895-2
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: loan_cards_pkey
+                  name: card_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: loan_cards_pkey
+                  name: loan_id
+                  type: BIGINT
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: date
+              - column:
+                  name: init_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: modified_by
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: payer
+                  type: VARCHAR(255)
+            schemaName: public
+            tableName: loan_cards
+
+
+
+  - changeSet:
+      id: 1705052801895-5
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: loan_id
+            indexName: loan_card_loan_ind
+            schemaName: public
+            tableName: loan_cards
+
+  - changeSet:
+      id: 1705052801895-6
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: card_id
+            indexName: loan_card_card_ind
+            schemaName: public
+            tableName: loan_cards
+
+  - changeSet:
+      id: 1705052801895-13
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: loan_id
+            baseTableName: loan_cards
+            baseTableSchemaName: public
+            constraintName: fk2iaghrfqvndh93661ry93qqos
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: loan
+            referencedTableSchemaName: public
+            validate: true
+
+  - changeSet:
+      id: 1705052801895-14
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: card_id
+            baseTableName: loan_cards
+            baseTableSchemaName: public
+            constraintName: fknoynccq9uaqm5ijne2e7fl5do
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: card
+            referencedTableSchemaName: public
+            validate: true
+

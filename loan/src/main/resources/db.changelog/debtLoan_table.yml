@@ -1,0 +1,83 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1706161667825-2
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: debt_loan_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: date
+              - column:
+                  name: init_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: modified_by
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: branch
+                  type: VARCHAR(255)
+              - column:
+                  name: loan_ext_id
+                  type: VARCHAR(255)
+              - column:
+                  name: passport_number
+                  type: VARCHAR(255)
+              - column:
+                  name: passport_serial
+                  type: VARCHAR(255)
+              - column:
+                  name: payer_name
+                  type: VARCHAR(255)
+              - column:
+                  name: payer_phone
+                  type: VARCHAR(255)
+              - column:
+                  name: pinfl
+                  type: VARCHAR(255)
+              - column:
+                  name: recommended
+                  type: BIGINT
+              - column:
+                  name: total
+                  type: BIGINT
+            schemaName: public
+            tableName: debt_loan
+
+  - changeSet:
+      id: 1706161667825-5
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: public
+            sequenceName: debt_loan_seq
+            startValue: 1
+
+  - changeSet:
+      id: 1706161667825-4
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - addUniqueConstraint:
+            columnNames: loan_ext_id
+            constraintName: loanextid
+            schemaName: public
+            tableName: debt_loan

@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1731908614888-1
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: log_protocol_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+              - column:
+                  name: loan_ext_id
+                  type: VARCHAR(255)
+              - column:
+                  name: request
+                  type: JSONB
+              - column:
+                  name: created_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: ip_address
+                  type: VARCHAR(255)
+
+            schemaName: public
+            tableName: log_protocol
+  - changeSet:
+      id: 1731908614888-2
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: public
+            sequenceName: log_protocol_seq
+            startValue: 1
+

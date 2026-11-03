@@ -1,0 +1,102 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1705052801895-4
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: card_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: created_by
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: date
+              - column:
+                  name: init_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: modified_by
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: expiry
+                  type: VARCHAR(255)
+              - column:
+                  name: holder
+                  type: VARCHAR(255)
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+              - column:
+                  name: is_confirmed
+                  type: BOOLEAN
+              - column:
+                  name: masked_pan
+                  type: VARCHAR(255)
+              - column:
+                  name: pan
+                  type: VARCHAR(255)
+              - column:
+                  name: phone
+                  type: VARCHAR(255)
+              - column:
+                  name: processing
+                  type: VARCHAR(255)
+              - column:
+                  name: service
+                  type: VARCHAR(255)
+              - column:
+                  name: token
+                  type: VARCHAR(255)
+            schemaName: public
+            tableName: card
+
+  - changeSet:
+      id: 1705052801895-10
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - addUniqueConstraint:
+            columnNames: pan
+            constraintName: card_ind
+            schemaName: public
+            tableName: card
+
+  - changeSet:
+      id: 1705052801895-11
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: public
+            sequenceName: card_seq
+            startValue: 1
+
+  - changeSet:
+      id: 1705052801895-12
+      author: ${DATABASECHANGELOG_CHANGESET_AUTHOR}
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            schemaName: public
+            sequenceName: card_stat_seq
+            startValue: 1

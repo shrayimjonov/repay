@@ -1,0 +1,83 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.8'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'uz.nodir'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    maven {
+        url 'https://internal.example.com/repository/maven-public/'
+
+        credentials {
+            username = System.getenv('NEXUS_USERNAME') ?: ''
+            password = System.getenv('NEXUS_PASSWORD') ?: ''
+        }
+    }
+   // mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "2022.0.5")
+    apachePoiVersion = '5.2.5'
+    shedlockVersion = '5.11.0'
+    jasyptVersion = '3.0.5'
+}
+
+dependencies {
+    implementation fileTree(dir: 'lib', include: ['*.jar'])
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+    implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.kafka:spring-kafka'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation "org.apache.poi:poi:${apachePoiVersion}"
+    implementation "org.apache.poi:poi-ooxml:${apachePoiVersion}"
+    implementation "net.javacrumbs.shedlock:shedlock-spring:${shedlockVersion}"
+    implementation "net.javacrumbs.shedlock:shedlock-provider-jdbc-template:${shedlockVersion}"
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'com.itextpdf:itextpdf:5.5.13.4'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+    implementation "com.github.ulisesbocchio:jasypt-spring-boot:${jasyptVersion}"
+    implementation 'org.springframework.cloud:spring-cloud-starter-consul-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+    implementation 'com.clickhouse:clickhouse-jdbc:0.4.6'
+    implementation 'io.github.sinfull1:hibernate6-clickhouse-dialect:1.0.2'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation("uz.davrbank.repay:common-logging:1.0.0")
+    implementation("org.springframework.cloud:spring-cloud-starter-consul-discovery")
+
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+
+tasks.named('bootBuildImage') {
+    builder = 'paketobuildpacks/builder-jammy-base:latest'
+}
+

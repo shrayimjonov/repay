@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: scoring
+  profiles:
+    active: test
+server:
+  port: 8720
+  servlet:
+    context-path: /scoring

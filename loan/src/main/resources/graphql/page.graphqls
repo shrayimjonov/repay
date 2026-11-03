@@ -1,0 +1,6 @@
+interface  PageParam {
+    pageNumber: Int,
+    pageSize : Int,
+    sortBy: String,
+    descending: Boolean
+}

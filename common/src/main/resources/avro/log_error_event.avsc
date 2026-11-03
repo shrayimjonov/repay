@@ -1,0 +1,34 @@
+/**
+if any service throws error send to log protocol service with this class.
+For example: Payment Service in pay method throws NULL pointer exception
+**/
+
+{
+  "type": "record",
+  "name": "LogErrorEvent",
+  "namespace": "uz.repay.common.generated.model.event",
+  "fields": [
+    {
+      "name": "service",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "method",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "message",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "date_time",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
